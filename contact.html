@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact et réservation · Domaine des Chabriers</title>
+<meta name="description" content="Demande de réservation au Domaine des Chabriers à Ourches (Drôme) : gîte, chambres d’hôtes, mariage, anniversaire, concert ou stage. 04 75 40 00 65.">
+<meta name="theme-color" content="#4A2A45">
+<link rel="icon" href="images/logo-fonce.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="visuellement-cache" href="#contenu">Aller au contenu</a>
+<div class="entete">
+  <div class="entete__envelop">
+    <a class="entete__logo" href="index.html" aria-label="Domaine des Chabriers, accueil">
+      <img class="logo-clair" src="images/logo-clair.png" alt="Domaine des Chabriers" width="700" height="203">
+      <img class="logo-fonce" src="images/logo-fonce.png" alt="" width="700" height="203">
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="gite.html">Le gîte</a></li>
+        <li><a href="receptions.html">Mariages et réceptions</a></li>
+        <li><a href="stages.html">Stages</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="bouton entete__appel" href="contact.html#demande">Demander une date</a>
+    <button class="entete__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+  </div>
+</div>
+<div id="contenu"></div>
+<main>
+<section class="demande" id="demande">
+  <div class="demande__photo"><img src="images/cour-poteries.jpg" alt="La cour du domaine et la tour" fetchpriority="high"></div>
+  <div class="envelop demande__grille">
+    <div class="demande__intro">
+      <h1>Parlez-nous <em>de votre projet</em></h1>
+      <p class="chapeau">Séjour en groupe, mariage, anniversaire, concert ou stage : dites-nous ce que vous imaginez. Plus vous en dites, plus la réponse sera précise.</p>
+      <div class="ronds-bloc">
+        <div class="ronds">
+        <a class="rond" href="tel:+33475400065"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></span>04 75 40 00 65</a>
+        <a class="rond" href="tel:+33628239021"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>06 28 23 90 21</a>
+        <a class="rond" href="mailto:contact@domainedeschabriers.com"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>Écrire</a>
+        <a class="rond" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>Itinéraire</a>
+      </div>
+        <a class="badge-avis contact-avis" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span class="etoiles" aria-hidden="true">★★★★★</span><strong>4,7</strong> sur Google · 24 avis</a>
+      </div>
+    </div>
+    <div class="formulaire">
+      <form data-formulaire novalidate>
+        <h2>Votre <em>demande</em></h2>
+        <fieldset class="groupe">
+          <legend>Votre projet</legend>
+          <div class="bulles">
+            <input type="radio" name="projet" id="p-gite" value="gite" required><label for="p-gite">Séjour au gîte</label>
+            <input type="radio" name="projet" id="p-chambre" value="chambre"><label for="p-chambre">Chambre d’hôtes</label>
+            <input type="radio" name="projet" id="p-mariage" value="mariage"><label for="p-mariage">Mariage</label>
+            <input type="radio" name="projet" id="p-fete" value="fete"><label for="p-fete">Anniversaire, retrouvailles</label>
+            <input type="radio" name="projet" id="p-concert" value="concert"><label for="p-concert">Concert, spectacle</label>
+            <input type="radio" name="projet" id="p-stage" value="stage"><label for="p-stage">Participer à un stage</label>
+            <input type="radio" name="projet" id="p-organiser" value="organiser"><label for="p-organiser">Organiser un stage</label>
+          </div>
+        </fieldset>
+        <div class="champs">
+          <div class="champ"><label for="c-nom">Nom et prénom *</label><input id="c-nom" name="nom" autocomplete="name" required data-manque="votre nom"></div>
+          <div class="champ"><label for="c-tel">Téléphone</label><input id="c-tel" name="telephone" type="tel" autocomplete="tel"></div>
+          <div class="champ champ--large"><label for="c-mail">E-mail *</label><input id="c-mail" name="email" type="email" autocomplete="email" required data-manque="votre e-mail"></div>
+          <div class="champ"><label for="c-date1" data-libelle-date1>Arrivée</label><input id="c-date1" name="date1" type="date"></div>
+          <div class="champ" data-champ-date2><label for="c-date2">Départ</label><input id="c-date2" name="date2" type="date"></div>
+          <div class="champ champ--large"><label for="c-pers">Nombre de personnes</label><input id="c-pers" name="personnes" type="number" min="1" inputmode="numeric"></div>
+          <div class="champ champ--large"><label for="c-msg">Votre message</label><textarea id="c-msg" name="message"></textarea></div>
+        </div>
+        <p class="formulaire__erreurs" role="alert" hidden></p>
+        <div class="formulaire__envoi">
+          <button class="bouton" type="submit">Envoyer ma demande</button>
+          <p>Vos coordonnées servent uniquement à vous répondre.</p>
+        </div>
+      </form>
+      <div class="formulaire__merci" hidden>
+        <h2>Merci, <em>c’est presque prêt</em></h2>
+        <p>Votre message est préparé dans votre messagerie : il ne reste qu’à l’envoyer.</p>
+        <a class="bouton" href="mailto:contact@domainedeschabriers.com">Ouvrir ma messagerie</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bon-a-savoir">
+  <div class="envelop">
+    <div class="tete-section apparait">
+      <p class="sur-titre">Bon à savoir</p>
+      <h2>Avant <em>de venir</em></h2>
+    </div>
+    <div class="bon-a-savoir">
+      <div class="apparait"><h3>Ouverture</h3><p>De mai à fin octobre, tous les jours.</p><p>Chambres d’hôtes en dehors de l’été.</p></div>
+      <div class="apparait apparait--2"><h3>Paiement</h3><p>Chèque, chèques vacances, espèces, virement, monnaie locale, carte bancaire.</p></div>
+      <div class="apparait apparait--3"><h3>Adresse</h3><p>470 route de la Salette<br>Les Chabriers<br>26120 Ourches</p><p><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="pied">
+  <div class="envelop">
+    <div class="pied__haut">
+      <div>
+        <img class="pied__logo" src="images/logo-clair.png" alt="Domaine des Chabriers" width="700" height="203" loading="lazy">
+        <p class="pied__accroche">Un lieu hors du temps pour vous ressourcer.</p>
+      </div>
+      <div>
+        <h3>Le domaine</h3>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="gite.html">Le gîte</a></li>
+          <li><a href="receptions.html">Mariages et réceptions</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Nous joindre</h3>
+        <ul>
+          <li><a href="tel:+33475400065">04 75 40 00 65</a></li>
+          <li><a href="tel:+33628239021">06 28 23 90 21</a></li>
+          <li><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></li>
+          <li><a href="http://www.facebook.com/domainedeschabriers" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Venir</h3>
+        <ul>
+          <li>470 route de la Salette</li>
+          <li>Les Chabriers, 26120 Ourches</li>
+          <li><a href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener">Itinéraire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <span>© <span data-annee>2026</span> Domaine des Chabriers · <a href="mentions-legales.html">Mentions légales</a></span>
+      <span>Maquette OBT Agency</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

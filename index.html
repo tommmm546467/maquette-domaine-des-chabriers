@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domaine des Chabriers · Gîte, réceptions et stages dans la Drôme</title>
+<meta name="description" content="Maison de maître de plus de 600 ans à Ourches, sur les contreforts du Vercors : gîte de 6 chambres avec piscine, salle de réception de plus de 300 m² et stages yoga et pilates.">
+<meta name="theme-color" content="#4A2A45">
+<link rel="icon" href="images/logo-fonce.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+/* Écran d'entrée (V2) : affiché à l'ouverture du site (nouvel onglet, nouvelle visite) et quand on recharge la page,
+   pas quand on revient sur l'accueil depuis une autre page du site. Décidé ici, avant le premier affichage. */
+(function () { var r = document.documentElement; r.classList.add('js');
+  try { var n = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    var recharge = n && n.type === 'reload';
+    if (sessionStorage.getItem('chabriers-entree-vue') && !recharge) r.classList.add('sans-entree');
+    sessionStorage.setItem('chabriers-entree-vue', '1'); } catch (e) {} })();
+</script>
+</head>
+<body>
+<div class="entree" id="entree" aria-hidden="true">
+  <img class="entree__photo" src="images/vue-ete.jpg" alt="" width="1600" height="1200" fetchpriority="high">
+  <div class="entree__logo"><img src="images/logo-clair.png" alt="" width="700" height="203"></div>
+</div>
+<a class="visuellement-cache" href="#contenu">Aller au contenu</a>
+<div class="entete">
+  <div class="entete__envelop">
+    <a class="entete__logo" href="index.html" aria-label="Domaine des Chabriers, accueil">
+      <img class="logo-clair" src="images/logo-clair.png" alt="Domaine des Chabriers" width="700" height="203">
+      <img class="logo-fonce" src="images/logo-fonce.png" alt="" width="700" height="203">
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="gite.html">Le gîte</a></li>
+        <li><a href="receptions.html">Mariages et réceptions</a></li>
+        <li><a href="stages.html">Stages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="bouton entete__appel" href="contact.html#demande">Demander une date</a>
+    <button class="entete__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+  </div>
+</div>
+<div id="contenu"></div>
+<main>
+<header class="heros">
+  <div class="heros__photo">
+        <video class="heros__video" autoplay muted loop playsinline preload="auto" poster="images/video-affiche.jpg" aria-hidden="true" tabindex="-1">
+      <source src="video/domaine-960.mp4" type="video/mp4" media="(max-width: 767px)">
+      <source src="video/domaine-1600.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="heros__contenu heros__contenu--avec-bande">
+    <a class="note-heros" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span class="etoiles" aria-hidden="true">★★★★★</span><strong>4,7</strong><span>sur Google · 24 avis</span></a>
+    <h1>Domaine <em>des Chabriers</em></h1>
+    <p class="heros__sous">Une maison de maître de plus de 600 ans au pied du Vercors. Réunissez vos proches, fêtez un grand jour ou prenez du temps pour vous.</p>
+    <div class="boutons">
+      <a class="bouton" href="contact.html#demande">Demander une date</a>
+      <a class="bouton bouton--clair" href="#portes">Découvrir le domaine</a>
+    </div>
+  </div>
+</header>
+
+<div class="bande-mots" id="mots">
+  <ul class="bande-mots__carte apparait">
+    <li><span class="bande-mots__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 17c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 21c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 14V5a2 2 0 0 1 4 0M16 14V5a2 2 0 0 0-4 0M8 9h8"/></svg></span><span><strong>Piscine</strong>avec transats</span></li>
+    <li><span class="bande-mots__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-7M12 14c-4 0-6-2.5-6-5.5S8.5 3 12 3s6 2.5 6 5.5S16 14 12 14zM8 21h8"/></svg></span><span><strong>Parc de 3 hectares</strong>au calme</span></li>
+    <li><span class="bande-mots__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span><span><strong>Salle de réception</strong>plus de 300 m²</span></li>
+    <li><span class="bande-mots__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M3 18v2M21 18v2M6 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3M12 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg></span><span><strong>6 chambres</strong>chacune sa salle d’eau</span></li>
+  </ul>
+</div>
+
+<section class="section" id="portes">
+  <div class="envelop">
+    <div class="tete-section apparait">
+      <p class="sur-titre">Le domaine</p>
+      <h2>Trois façons de <em>vivre</em> le domaine</h2>
+    </div>
+    <div class="portes apparait apparait--2">
+      <a class="porte" href="gite.html">
+        <img src="images/piscine.jpg" alt="La piscine devant la maison de maître" loading="lazy">
+        <span class="porte__num">01</span><span class="porte__verbe">Séjourner</span>
+        <div class="porte__bas">
+          <h3>Le gîte</h3>
+          <p>Tout le gîte pour votre groupe : 6 chambres avec salle d’eau, une piscine et 3 hectares de parc.</p>
+          <span class="bouton">Voir le gîte</span>
+        </div>
+      </a>
+      <a class="porte" href="receptions.html">
+        <img src="images/salle-coucher-soleil.jpg" alt="La salle de réception au coucher du soleil" loading="lazy">
+        <span class="porte__num">02</span><span class="porte__verbe">Célébrer</span>
+        <div class="porte__bas">
+          <h3>Mariages et réceptions</h3>
+          <p>Une salle de plus de 300 m² et un grand parc pour dire oui, souffler vos bougies ou faire la fête.</p>
+          <span class="bouton">Voir la salle</span>
+        </div>
+      </a>
+      <a class="porte" href="stages.html">
+        <img src="images/yoga-cedre.jpg" alt="Séance de yoga sous le grand cèdre du parc" loading="lazy">
+        <span class="porte__num">03</span><span class="porte__verbe">Se ressourcer</span>
+        <div class="porte__bas">
+          <h3>Stages yoga et pilates</h3>
+          <p>Du yoga et du pilates au calme, sous les grands arbres du parc.</p>
+          <span class="bouton">Voir les stages</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lin-fonce" id="histoire">
+  <div class="envelop split">
+    <div class="apparait">
+      <p class="sur-titre">Son histoire</p>
+      <h2>Plus de 600 ans <em>de caractère</em></h2>
+      <p class="chapeau">Ici, vous ne louez pas une simple maison : vous séjournez dans une ancienne ferme du 15ᵉ siècle, restaurée avec soin.</p>
+      <ol class="frise">
+        <li><span class="frise__date">15ᵉ siècle</span><p>Une propriété agricole voit le jour. Son nom, « Les Chabriers », veut dire « les éleveurs de chèvres ».</p></li>
+        <li><span class="frise__date">«  Le château  »</span><p>La maison de maître a tant de caractère qu’on la surnomme le château. Vous comprendrez pourquoi en arrivant.</p></li>
+        <li><span class="frise__date">La rénovation</span><p>Céline et Yves la transforment en gîte et en chambres d’hôtes, en gardant son âme et ses vieilles pierres.</p></li>
+        <li><span class="frise__date">Aujourd’hui</span><p>Elle vous ouvre ses portes, avec son parc de 3 hectares, sa piscine et sa salle de réception.</p></li>
+      </ol>
+    </div>
+    <div class="superposees apparait apparait--2">
+      <div class="superposees__grande photo-cadre"><img src="images/vue-ete.jpg" alt="La maison de maître et sa tour vues du parc, en été" loading="lazy"></div>
+      <div class="superposees__petite photo-cadre"><img src="images/cheminee.jpg" alt="La grande cheminée en pierre" loading="lazy"></div>
+      <div class="superposees__cachet">Plus de<br>600 ans</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="plan">
+  <div class="envelop">
+    <div class="tete-section apparait">
+      <p class="sur-titre">Le plan</p>
+      <h2>Le domaine <em>en un coup d’œil</em></h2>
+      <p class="chapeau">Choisissez une lettre : vous voyez tout de suite ce qui est à vous pendant votre séjour.</p>
+    </div>
+    <div class="plan apparait apparait--2">
+      <div class="plan__carte">
+        <img src="images/plan-domaine.jpg" alt="Vue aérienne du domaine des Chabriers et de son parc" loading="lazy">
+        <button class="point" type="button" style="left:34.7%;top:64%" aria-pressed="true" data-titre="Le gîte" data-texte="Le bâtiment que vous louez et tout le parc." data-photo="images/vue-ete.jpg" data-alt="La maison de maître vue du parc">A</button>
+        <button class="point" type="button" style="left:42.9%;top:64%" aria-pressed="false" data-prive data-titre="Les propriétaires" data-texte="Céline et Yves vivent ici : disponibles quand vous avez besoin d’eux, discrets le reste du temps." data-photo="images/cour-tour.jpg" data-alt="La cour et la tour">B</button>
+        <button class="point" type="button" style="left:52.9%;top:62.1%" aria-pressed="false" data-prive data-titre="Le gîte en rénovation" data-texte="Un bâtiment en travaux, fermé et inhabité." data-photo="images/vue-hiver.jpg" data-alt="Le domaine vu du chemin, en hiver">C</button>
+        <button class="point" type="button" style="left:56.7%;top:88.5%" aria-pressed="false" data-titre="La salle de réception" data-texte="Plus de 300 m² couverts, avec 50 m² de cuisine et de sanitaires." data-photo="images/salle-sous-les-arbres.jpg" data-alt="La salle de réception sous les arbres du parc">D</button>
+      </div>
+      <div class="plan__fiche">
+        <img src="images/vue-ete.jpg" alt="La maison de maître vue du parc" loading="lazy">
+        <div>
+          <span class="plan__lettre">Bâtiment A</span>
+          <h3>Le gîte</h3>
+          <p>Le bâtiment que vous louez et tout le parc.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lin-fonce" id="hotes">
+  <div class="envelop hotes">
+    <div class="photo-a-prevoir apparait">
+      <strong>Photo à prévoir</strong>
+      Céline et Yves dans la cour, devant la tour, en lumière de fin de journée.
+    </div>
+    <div class="apparait apparait--2">
+      <p class="sur-titre">Vos hôtes</p>
+      <h2>Céline <em>et</em> Yves</h2>
+      <p class="chapeau">Ils ont rénové le domaine avec passion. Et c’est leur accueil que les visiteurs citent le plus dans leurs avis.</p>
+      <ul class="citations">
+        <li><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><q>Le lieu est calme et les hôtes très accueillants et bienveillants.</q><cite>Willy, sur Google</cite></li>
+        <li><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><q>La propriétaire est aux petits soins et disponible à tout moment.</q><cite>Jean François M., sur Google</cite></li>
+        <li><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><q>Céline est une hôte remarquable</q><cite>Catherine R., sur Google</cite></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="images">
+  <div class="envelop">
+    <div class="tete-section apparait">
+      <p class="sur-titre">En images</p>
+      <h2>Le domaine <em>au fil du jour</em></h2>
+    </div>
+    <div class="mosaique apparait apparait--2">
+      <figure><img src="images/cedre.jpg" alt="Le grand cèdre du parc" loading="lazy"><figcaption>Le cèdre</figcaption></figure>
+      <figure><img src="images/piscine-longue.jpg" alt="La piscine et la maison" loading="lazy"><figcaption>La piscine</figcaption></figure>
+      <figure><img src="images/terrasse-soir.jpg" alt="La terrasse au coucher du soleil" loading="lazy"><figcaption>La terrasse</figcaption></figure>
+      <figure><img src="images/salle-tables-rondes.jpg" alt="La salle de réception dressée pour un dîner" loading="lazy"><figcaption>La salle de réception</figcaption></figure>
+      <figure><img src="images/fontaine-jardin.jpg" alt="La fontaine dans le jardin" loading="lazy"><figcaption>La fontaine</figcaption></figure>
+      <figure><img src="images/porte-illuminee.jpg" alt="Une porte en pierre éclairée un soir de fête" loading="lazy"><figcaption>Un soir de fête</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lin-fonce" id="avis">
+  <div class="tete-section tete-section--centre apparait">
+    <p class="sur-titre">Ils sont venus</p>
+    <h2>Ce qu’en disent <em>nos visiteurs</em></h2>
+  </div>
+  <div class="notes apparait">
+    <a class="note" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span class="note__chiffre">4,7</span><span class="note__detail"><strong>Google</strong>24 avis</span></a>
+    <span class="note"><span class="note__chiffre">9,2</span><span class="note__detail"><strong>Booking</strong>47 avis</span></span>
+    <span class="note"><span class="note__chiffre">5/5</span><span class="note__detail"><strong>Mariages.net</strong>6 avis</span></span>
+  </div>
+  <div class="defile apparait apparait--2">
+    <div class="defile__piste">
+      <article class="carte-avis"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Endroit magique on se sent comme chez nous, tout est conçu pour se sentir bien !</blockquote><footer><strong>Willy</strong><span>Google</span></footer></article>
+      <article class="carte-avis"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Un endroit magnifique et reposant.</blockquote><footer><strong>Jean François M.</strong><span>Google</span></footer></article>
+      <article class="carte-avis"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Un lieu tout simplement extraordinaire pour faire le plein d'énergie en communion avec la nature.</blockquote><footer><strong>Catherine V.</strong><span>Google</span></footer></article>
+      <article class="carte-avis"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Ecrin de verdure et de paix, accueil chaleureux et adaptable à la condition de chacun</blockquote><footer><strong>Alix M.</strong><span>Google</span></footer></article>
+      <article class="carte-avis"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Une belle découverte avec un accueil des plus agréables et une grande disponibilité de la part des propriétaires des lieux.</blockquote><footer><strong>F. K.</strong><span>Google</span></footer></article>
+      <article class="carte-avis"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Une magnifique bâtisse très bien rénovée.</blockquote><footer><strong>Agnès C.</strong><span>Google</span></footer></article>
+      <article class="carte-avis"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Endroit idéal pour se ressourcer, voir de beaux paysages et faire de belles rencontres.</blockquote><footer><strong>Manon T.</strong><span>Google</span></footer></article>
+      <article class="carte-avis"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Un bel endroit très calme, une belle demeure pleine de charme et une hôte vraiment charmante !</blockquote><footer><strong>Florence W.</strong><span>Google</span></footer></article>
+      <article class="carte-avis"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Un lieu d'accueil et de sérénité.</blockquote><footer><strong>Pascale</strong><span>Google</span></footer></article>
+    </div>
+  </div>
+</section>
+
+<section class="bandeau" id="appel">
+  <div class="bandeau__photo"><img src="images/salle-lumieres.jpg" alt="La salle de réception éclairée pour une soirée" loading="lazy"></div>
+  <div class="bandeau__contenu">
+    <h2>Votre séjour <em>commence ici</em></h2>
+    <p>Un séjour entre amis, une fête de famille, un mariage ou un stage ? Dites-nous vos dates et votre projet.</p>
+    <a class="bouton" href="contact.html#demande">Demander une date</a>
+  </div>
+</section>
+
+</main>
+<footer class="pied">
+  <div class="envelop">
+    <div class="pied__haut">
+      <div>
+        <img class="pied__logo" src="images/logo-clair.png" alt="Domaine des Chabriers" width="700" height="203" loading="lazy">
+        <p class="pied__accroche">Un lieu hors du temps pour vous ressourcer.</p>
+      </div>
+      <div>
+        <h3>Le domaine</h3>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="gite.html">Le gîte</a></li>
+          <li><a href="receptions.html">Mariages et réceptions</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Nous joindre</h3>
+        <ul>
+          <li><a href="tel:+33475400065">04 75 40 00 65</a></li>
+          <li><a href="tel:+33628239021">06 28 23 90 21</a></li>
+          <li><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></li>
+          <li><a href="http://www.facebook.com/domainedeschabriers" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Venir</h3>
+        <ul>
+          <li>470 route de la Salette</li>
+          <li>Les Chabriers, 26120 Ourches</li>
+          <li><a href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener">Itinéraire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <span>© <span data-annee>2026</span> Domaine des Chabriers · <a href="mentions-legales.html">Mentions légales</a></span>
+      <span>Maquette OBT Agency</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
