@@ -19,20 +19,31 @@
   var aujourdhui = cle(new Date());
   var lisible = function (k) { var d = date(k); return JOURS[d.getDay()] + ' ' + d.getDate() + ' ' + MOIS[d.getMonth()] + ' ' + d.getFullYear(); };
 
+  /* Les réservations qui comptent pour un choix : les siennes, plus celles qui le bloquent
+     (une privatisation du domaine bloque les gîtes ; un gîte réservé bloque la privatisation) */
+  function reservations(logement) {
+    var r = DISPOS[logement].reserve.slice();
+    Object.keys(DISPOS).forEach(function (autre) {
+      if (autre !== logement && (logement === 'domaine' || autre === 'domaine')) r = r.concat(DISPOS[autre].reserve);
+    });
+    return r;
+  }
   /* Une nuit (celle qui commence le jour k) : libre, réservée ou fermée */
   function etat(logement, k) {
     var l = DISPOS[logement];
     if (k < aujourdhui) return 'passe';
     if (l.ouvreLe && k < l.ouvreLe) return 'ferme';
     if (l.mois && l.mois.indexOf(date(k).getMonth() + 1) < 0) return 'ferme';
-    for (var i = 0; i < l.reserve.length; i++) if (k >= l.reserve[i][0] && k < l.reserve[i][1]) return 'reserve';
+    var r = reservations(logement);
+    for (var i = 0; i < r.length; i++) if (k >= r[i][0] && k < r[i][1]) return 'reserve';
     return 'libre';
   }
-  /* Nuits minimum : 2 en temps normal, 3 l'été au château (bon à savoir de la page tarifs) */
+  /* Nuits minimum : celles de disponibilites.js ; 3 l'été au château (bon à savoir de la page tarifs) */
   function minimum(logement, arrivee, depart) {
-    if (logement !== 'chateau') return 2;
+    var mini = DISPOS[logement].minimum || 2;
+    if (logement !== 'chateau') return mini;
     for (var k = arrivee; k < depart; k = plus(k, 1)) { var m = date(k).getMonth() + 1; if (m === 7 || m === 8) return 3; }
-    return 2;
+    return mini;
   }
   /* Premier mois où le logement a une nuit libre, à partir d'aujourd'hui */
   function premierMois(logement) {
@@ -108,7 +119,7 @@
       if (etat(s.logement, n) !== 'libre') { s.message = 'Une nuit de cette période est déjà prise' + NB + ': choisissez d’autres dates.'; return dessiner(); }
     }
     var nuits = Math.round((date(k) - date(s.arrivee)) / 864e5), mini = minimum(s.logement, s.arrivee, k);
-    if (nuits < mini) { s.message = mini === 3 ? 'L’été, 3 nuits minimum au château.' : '2 nuits minimum.'; return dessiner(); }
+    if (nuits < mini) { s.message = mini === 3 ? 'L’été, 3 nuits minimum au château.' : mini + ' nuits minimum.'; return dessiner(); }
     s.depart = k; s.message = '';
     dessiner();
   }
@@ -134,7 +145,7 @@
     if (s.arrivee && s.depart) {
       var nuits = Math.round((date(s.depart) - date(s.arrivee)) / 864e5);
       choix.innerHTML = '<strong>' + DISPOS[s.logement].nom + '</strong><br>Du ' + lisible(s.arrivee) + ' au ' + lisible(s.depart) + ' · ' + nuits + ' nuits';
-      suite.href = 'contact.html?projet=gite&logement=' + s.logement + '&arrivee=' + s.arrivee + '&depart=' + s.depart + '#demande';
+      suite.href = 'contact.html?projet=' + (DISPOS[s.logement].projet || 'gite') + '&logement=' + s.logement + '&arrivee=' + s.arrivee + '&depart=' + s.depart + '#demande';
       suite.removeAttribute('aria-disabled');
     } else {
       choix.textContent = s.message || (s.arrivee ? 'Arrivée le ' + lisible(s.arrivee) + '. Choisissez maintenant votre date de départ.' : 'Choisissez votre date d’arrivée.');
@@ -149,6 +160,9 @@
     if (e) e.preventDefault();
     if (!panneau) construire();
     ouvreur = document.activeElement;
+    // un bouton peut choisir le logement d'avance (data-calendrier="chateau" sur la page du château…)
+    var voulu = e && e.currentTarget && e.currentTarget.getAttribute('data-calendrier');
+    if (voulu && DISPOS[voulu] && voulu !== s.logement) { s.logement = voulu; s.arrivee = s.depart = null; s.message = ''; s.mois = null; }
     if (!s.mois) s.mois = premierMois(s.logement);
     dessiner();
     panneau.hidden = false;

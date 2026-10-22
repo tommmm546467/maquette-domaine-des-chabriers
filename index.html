@@ -49,7 +49,7 @@
     <h1>Domaine <em>des Chabriers</em></h1>
     <p class="heros__sous">Une maison de maître de plus de 600 ans au pied du Vercors. Réunissez vos proches, fêtez un grand jour ou prenez du temps pour vous.</p>
     <div class="boutons">
-      <a class="bouton" href="contact.html#demande">Demander une date</a>
+      <a class="bouton" href="contact.html#demande" data-calendrier="">Demander une date</a>
       <a class="bouton bouton--clair" href="#portes">Découvrir le domaine</a>
     </div>
   </div>
@@ -76,7 +76,6 @@
         <span class="porte__num">01</span><span class="porte__verbe">Séjourner</span>
         <div class="porte__bas">
           <h3>Les gîtes</h3>
-          <p>Le château pour 14 personnes et bientôt la ferme, avec une piscine et 3 hectares de parc.</p>
           <span class="bouton">Voir les gîtes</span>
         </div>
       </a>
@@ -85,7 +84,6 @@
         <span class="porte__num">02</span><span class="porte__verbe">Célébrer</span>
         <div class="porte__bas">
           <h3>Mariages et réceptions</h3>
-          <p>Une salle de plus de 300 m² et un grand parc pour dire oui, souffler vos bougies ou faire la fête.</p>
           <span class="bouton">Voir la salle</span>
         </div>
       </a>
@@ -94,7 +92,6 @@
         <span class="porte__num">03</span><span class="porte__verbe">Se ressourcer</span>
         <div class="porte__bas">
           <h3>Stages divers</h3>
-          <p>Des stages au calme, sous les grands arbres du parc.</p>
           <span class="bouton">Voir les stages</span>
         </div>
       </a>
@@ -124,20 +121,22 @@
 </section>
 
 <section class="section" id="plan">
-  <div class="envelop">
-    <div class="tete-section apparait">
-      <p class="sur-titre">Le plan</p>
-      <h2>Le domaine <em>en un coup d’œil</em></h2>
-      <p class="chapeau">Quatre bâtiments, quatre lettres : voici ce que chacun abrite.</p>
-    </div>
-    <div class="plan plan--blocs apparait apparait--2">
-      <div class="plan__carte">
-        <img src="images/plan-domaine.jpg" alt="Vue aérienne du domaine des Chabriers et de son parc, avec les lettres des quatre bâtiments" loading="lazy">
-        <span class="point" style="left:34.7%;top:64%" data-bloc="A" aria-hidden="true">A</span>
-        <span class="point" style="left:42.9%;top:64%" data-bloc="B" aria-hidden="true">B</span>
-        <span class="point" style="left:52.9%;top:62.1%" data-bloc="C" aria-hidden="true">C</span>
-        <span class="point" style="left:56.7%;top:88.5%" data-bloc="D" aria-hidden="true">D</span>
+  <div class="envelop plan--blocs">
+    <div class="plan-haut">
+      <div class="tete-section apparait">
+        <p class="sur-titre">Le plan</p>
+        <h2>Le domaine <em>en un coup d’œil</em></h2>
+        <p class="chapeau">Quatre bâtiments, quatre lettres : voici ce que chacun abrite.</p>
       </div>
+      <div class="plan__carte plan__carte--carre apparait apparait--2">
+        <img src="images/plan-domaine.jpg" alt="Vue aérienne du domaine des Chabriers et de son parc, avec les lettres des quatre bâtiments" loading="lazy">
+        <span class="point" style="left:19.4%;top:64%" data-bloc="A" aria-hidden="true">A</span>
+        <span class="point" style="left:35.8%;top:64%" data-bloc="B" aria-hidden="true">B</span>
+        <span class="point" style="left:55.8%;top:62.1%" data-bloc="C" aria-hidden="true">C</span>
+        <span class="point" style="left:63.4%;top:88.5%" data-bloc="D" aria-hidden="true">D</span>
+      </div>
+    </div>
+    <div class="plan apparait apparait--2">
       <ul class="plan__blocs">
         <li><a class="bloc" href="gite-chateau.html" data-bloc="A"><img src="images/chateau-facade.jpg" alt="Le château, gîte A, et sa terrasse" loading="lazy"><span class="bloc__lettre">A</span><span class="bloc__texte"><strong>Le château</strong><small>Vous louez tout l’étage 1 avec sa terrasse · accès au parc</small><span class="bloc__lien">Voir le gîte A</span></span></a></li>
         <li><div class="bloc" data-bloc="B" tabindex="0"><img src="images/veranda.jpg" alt="La véranda, maison des propriétaires" loading="lazy"><span class="bloc__lettre">B</span><span class="bloc__texte"><strong>La véranda</strong><small>Maison des propriétaires · accueil de la clientèle</small></span></div></li>
@@ -148,12 +147,9 @@
   </div>
 </section>
 
-<section class="section section--lin-fonce" id="hotes">
-  <div class="envelop hotes">
-    <div class="photo-a-prevoir apparait">
-      <strong>Photo à prévoir</strong>
-      Céline et Yves dans la cour, devant la tour, en lumière de fin de journée.
-    </div>
+<section class="section section--lin-fonce section--compacte" id="hotes">
+  <div class="envelop hotes hotes--compact">
+    <div class="hotes__portraits apparait"><img src="images/proprio-celine.jpg" alt="Céline, votre hôte" loading="lazy"><img src="images/proprio-yves.jpg" alt="Yves, votre hôte" loading="lazy"></div>
     <div class="apparait apparait--2">
       <p class="sur-titre">Vos hôtes</p>
       <h2>Céline <em>et</em> Yves</h2>
@@ -173,12 +169,16 @@
       <p class="sur-titre">En images</p>
       <h2>Le domaine <em>au fil du jour</em></h2>
     </div>
-    <div class="mosaique apparait apparait--2">
-      <figure><img src="images/cedre.jpg" alt="Le grand cèdre du parc" loading="lazy"><figcaption>Le cèdre</figcaption></figure>
+    <div class="mosaique mosaique--longue apparait apparait--2">
+      <figure><img src="images/domaine-face.jpg" alt="La maison de maître et sa tour, vues de l’allée" loading="lazy"><figcaption>La maison de maître</figcaption></figure>
       <figure><img src="images/piscine-longue.jpg" alt="La piscine et la maison" loading="lazy"><figcaption>La piscine</figcaption></figure>
       <figure><img src="images/terrasse-soir.jpg" alt="La terrasse au coucher du soleil" loading="lazy"><figcaption>La terrasse</figcaption></figure>
+      <figure><img src="images/cour1-vue.jpg" alt="La cour du château, sa tour et son porche" loading="lazy"><figcaption>La cour</figcaption></figure>
       <figure><img src="images/salle-tables-rondes.jpg" alt="La salle de réception dressée pour un dîner" loading="lazy"><figcaption>La salle de réception</figcaption></figure>
       <figure><img src="images/fontaine-jardin.jpg" alt="La fontaine dans le jardin" loading="lazy"><figcaption>La fontaine</figcaption></figure>
+      <figure><img src="images/domaine-panoramique.jpg" alt="Le château et ses tours au milieu des arbres" loading="lazy"><figcaption>Le domaine</figcaption></figure>
+      <figure><img src="images/pigeonnier.jpg" alt="La tour aux tuiles vernissées" loading="lazy"><figcaption>La tour</figcaption></figure>
+      <figure><img src="images/domaine-crepuscule.jpg" alt="Le domaine vu du ciel à la tombée du jour" loading="lazy"><figcaption>À la tombée du jour</figcaption></figure>
       <figure><img src="images/porte-illuminee.jpg" alt="Une porte en pierre éclairée un soir de fête" loading="lazy"><figcaption>Un soir de fête</figcaption></figure>
     </div>
   </div>
@@ -190,8 +190,8 @@
     <h2>Ce qu’en disent <em>nos visiteurs</em></h2>
   </div>
   <div class="notes apparait">
-    <a class="note" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span class="note__chiffre">4,7</span><span class="note__detail"><strong>Google</strong>24 avis</span></a>
-    <span class="note"><span class="note__chiffre">9,2</span><span class="note__detail"><strong>Booking</strong>47 avis</span></span>
+    <a class="note" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span class="note__chiffre">4,7/5</span><span class="note__detail"><strong>Google</strong>24 avis</span></a>
+    <span class="note"><span class="note__chiffre">9,2/10</span><span class="note__detail"><strong>Booking</strong>47 avis</span></span>
     <span class="note"><span class="note__chiffre">5/5</span><span class="note__detail"><strong>Mariages.net</strong>6 avis</span></span>
   </div>
   <div class="defile apparait apparait--2">
@@ -214,7 +214,7 @@
   <div class="bandeau__contenu">
     <h2>Votre séjour <em>commence ici</em></h2>
     <p>Un séjour entre amis, une fête de famille, un mariage ou un stage ? Dites-nous vos dates et votre projet.</p>
-    <a class="bouton" href="contact.html#demande">Demander une date</a>
+    <a class="bouton" href="contact.html#demande" data-calendrier="">Demander une date</a>
   </div>
 </section>
 
@@ -255,7 +255,7 @@
       </div>
     </div>
     <div class="pied__bas">
-      <span>© <span data-annee>2026</span> Domaine des Chabriers · <a href="mentions-legales.html">Mentions légales</a></span>
+      <span>© <span data-annee>2026</span> Domaine des Chabriers · <a href="mentions-legales.html">Mentions légales</a> · <a href="plan-du-site.html">Plan du site</a> · <a href="confidentialite.html">Confidentialité</a></span>
       <span>Maquette OBT Agency</span>
     </div>
   </div>

@@ -44,32 +44,45 @@
     <h1>Gîte A, <em>le château</em></h1>
     <p class="heros__sous">14 personnes en 6 chambres, une grande cuisine, une cuisine d’été et sa cour, une piscine et 3 hectares de parc.</p>
     <div class="boutons">
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
+      <a class="bouton" href="contact.html?projet=gite#demande" data-calendrier="chateau">Demander mes dates</a>
       <a class="bouton bouton--clair" href="#tarifs">Voir les tarifs</a>
     </div>
   </div>
 </header>
 
 <section class="section" id="chambres">
-  <div class="envelop" data-rail>
+  <div class="envelop">
     <div class="tete-section apparait">
       <p class="sur-titre">Les chambres</p>
       <h2>Six chambres, <em>six ambiances</em></h2>
       <p class="chapeau">14 personnes : 2 chambres de 3 et 4 chambres de 2. Chaque chambre a sa salle d’eau ou son coin douche : fini l’attente devant la salle de bain le matin.</p>
     </div>
-    <div class="rail__fleches"><button class="fleche" type="button" data-rail-g aria-label="Chambres précédentes">←</button><button class="fleche" type="button" data-rail-d aria-label="Chambres suivantes">→</button></div>
-    <div class="chambres rail">
+    <div class="chambres chambres--grille">
       <button class="chambre apparait" type="button" data-fiche="chambre-nature"><img src="images/chateau-nature-1.jpg" alt="La chambre Nature et son papier peint de feuillages" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Nature</em></span><span class="chambre__detail">2 adultes et 1 enfant</span></span></button>
-      <button class="chambre apparait apparait--2" type="button" data-fiche="chambre-crepuscule"><img src="images/chateau-crepuscule-1.jpg" alt="La chambre Crépuscule" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Crépuscule</em></span><span class="chambre__detail">2 adultes et 1 enfant</span></span></button>
+      <button class="chambre apparait apparait--2" type="button" data-fiche="chambre-crepuscule"><img src="images/chateau-crepuscule-1.jpg" alt="Les lits de la chambre Crépuscule" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Crépuscule</em></span><span class="chambre__detail">2 adultes et 1 enfant</span></span></button>
       <button class="chambre apparait apparait--3" type="button" data-fiche="chambre-coquelicot"><img src="images/chateau-coquelicot-1.jpg" alt="La chambre Coquelicot aux murs rouges" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Coquelicot</em></span><span class="chambre__detail">2 adultes</span></span></button>
-      <button class="chambre apparait" type="button" data-fiche="chambre-luirre"><img src="images/chateau-luirre-1.jpg" alt="La chambre Luirre et sa cheminée" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Luirre</em></span><span class="chambre__detail">2 adultes</span></span></button>
+      <button class="chambre apparait" type="button" data-fiche="chambre-luirre"><img src="images/chateau-luirre-1.jpg" alt="Le lit de la chambre Luirre" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Luirre</em></span><span class="chambre__detail">2 adultes</span></span></button>
       <button class="chambre apparait apparait--2" type="button" data-fiche="chambre-aiguille"><img src="images/chateau-aiguille-1.jpg" alt="La chambre Aiguille et sa fresque de montagnes" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Aiguille</em></span><span class="chambre__detail">2 adultes</span></span></button>
       <button class="chambre apparait apparait--3" type="button" data-fiche="chambre-drome"><img src="images/chateau-drome-1.jpg" alt="La chambre Drôme et sa fresque de rivière" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Drôme</em></span><span class="chambre__detail">2 adultes et 1 bébé</span></span></button>
     </div>
   </div>
 </section>
 
-<section class="section section--lin-fonce" id="vivre-ensemble">
+<section class="section section--lin-fonce" id="dortoir">
+  <div class="envelop">
+    <div class="encart apparait">
+      <div class="encart__photo"><img src="images/chateau-dortoir.jpg" alt="Le dortoir du grenier, lits alignés sous la charpente" loading="lazy" data-agrandir><img src="images/chateau-grenier.jpg" alt="Le grenier et son billard" loading="lazy" data-agrandir></div>
+      <div class="encart__texte">
+        <p class="sur-titre">Pour les grands groupes</p>
+        <div class="encart__chiffre">15</div>
+        <h3>couchages <em>au grenier</em></h3>
+        <p>Vous êtes plus nombreux ? Option dortoir ou grenier : incluse dans le mariage, avec un supplément pour tout autre événement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="vivre-ensemble">
   <div class="envelop split">
     <div class="apparait">
       <p class="sur-titre">Les pièces communes</p>
@@ -97,13 +110,12 @@
 
 <section class="dehors" id="dehors">
   <div class="dehors__fond diaporama" data-diaporama>
-    <img class="est-visible" src="images/piscine-pool-house.jpg" alt="La piscine et ses transats" loading="lazy">
-    <img src="images/vue-piscine-maison.jpg" alt="La piscine devant le château" loading="lazy">
-    <img src="images/parc.jpg" alt="La grande pelouse du parc bordée d’arbres" loading="lazy">
-    <img src="images/vue-parc-poolhouse.jpg" alt="Le parc derrière le pool house" loading="lazy">
-    <img src="images/vue-petanque.jpg" alt="Le terrain de pétanque et la piscine" loading="lazy">
-    <img src="images/vue-fontaine-cedre.jpg" alt="La fontaine sous le grand cèdre" loading="lazy">
-    <img src="images/coin-detente.jpg" alt="Le coin détente sous les arbres, côté ouest" loading="lazy">
+    <img class="est-visible" src="images/vue-aerienne-piscine.jpg" alt="Le domaine vu du ciel, la piscine au bord du parc">
+    <img src="images/piscine-nuit.jpg" alt="La piscine éclairée le soir, devant le pool house">
+    <img src="images/terrasse-repas.jpg" alt="La terrasse dressée pour un repas, à l’ombre du parasol">
+    <img src="images/vue-petanque.jpg" alt="Le terrain de pétanque et la piscine">
+    <img src="images/vue-ete.jpg" alt="La maison de maître et sa tour vues du parc">
+    <img src="images/domaine-crepuscule.jpg" alt="Le domaine vu du ciel à la tombée du jour">
   </div>
   <div class="envelop">
     <div class="dehors__texte apparait">
@@ -142,22 +154,8 @@
           <li>Vous restez plus longtemps ? Demandez un tarif dégressif.</li>
           <li>Paiement : chèque, chèques vacances, espèces, virement, monnaie locale, carte bancaire.</li>
         </ul>
-        <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
+        <a class="bouton" href="contact.html?projet=gite#demande" data-calendrier="chateau">Demander mes dates</a>
         <p class="notes-tarifs"><a href="tarifs.html">Tous les tarifs, ferme comprise</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="dortoir">
-  <div class="envelop">
-    <div class="encart apparait">
-      <div class="encart__photo"><img src="images/chateau-dortoir.jpg" alt="Le dortoir du grenier, lits alignés sous la charpente" loading="lazy" data-agrandir><img src="images/chateau-grenier.jpg" alt="Le grenier et son billard" loading="lazy" data-agrandir></div>
-      <div class="encart__texte">
-        <p class="sur-titre">Pour les grands groupes</p>
-        <div class="encart__chiffre">15</div>
-        <h3>couchages <em>au grenier</em></h3>
-        <p>Vous êtes plus nombreux ? Option dortoir ou grenier : incluse dans le mariage, avec un supplément pour tout autre événement.</p>
       </div>
     </div>
   </div>
@@ -168,7 +166,7 @@
   <div class="bandeau__contenu">
     <h2>Vos vacances <em>ensemble</em></h2>
     <p>Dites-nous vos dates et combien vous êtes.</p>
-    <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
+    <a class="bouton" href="contact.html?projet=gite#demande" data-calendrier="chateau">Demander mes dates</a>
   </div>
 </section>
 
@@ -182,7 +180,7 @@
       <p class="sur-titre">Gîte A · Le château</p>
       <h2 id="t-nature">Chambre <em>Nature</em></h2>
       <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes et 1 enfant</strong></li><li><span>Lits</span><strong>2 lits simples, un lit de 80 × 190 cm en option et un lit bébé</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
+      <a class="bouton" href="contact.html?projet=gite#demande" data-calendrier="chateau">Demander mes dates</a>
     </div>
   </div>
 </dialog>
@@ -190,13 +188,13 @@
   <button class="fiche__fermer" type="button" aria-label="Fermer">×</button>
   <div class="fiche__boite">
     <div class="fiche__photos">
-      <img src="images/chateau-crepuscule-1.jpg" alt="La chambre Crépuscule" loading="lazy" data-agrandir><img src="images/chateau-crepuscule-2.jpg" alt="Les lits de la chambre Crépuscule" loading="lazy" data-agrandir><img src="images/chateau-crepuscule-3.jpg" alt="Le lit simple de la chambre Crépuscule" loading="lazy" data-agrandir><img src="images/chateau-crepuscule-4.jpg" alt="La chambre Crépuscule vue de l’entrée" loading="lazy" data-agrandir><img src="images/chateau-crepuscule-5.jpg" alt="La salle d’eau de la chambre Crépuscule" loading="lazy" data-agrandir>
+      <img src="images/chateau-crepuscule-1.jpg" alt="Les lits de la chambre Crépuscule" loading="lazy" data-agrandir><img src="images/chateau-crepuscule-2.jpg" alt="Le lit simple de la chambre Crépuscule" loading="lazy" data-agrandir><img src="images/chateau-crepuscule-3.jpg" alt="La chambre Crépuscule vue de l’entrée" loading="lazy" data-agrandir><img src="images/chateau-crepuscule-4.jpg" alt="La salle d’eau de la chambre Crépuscule" loading="lazy" data-agrandir>
     </div>
     <div class="fiche__texte">
       <p class="sur-titre">Gîte A · Le château</p>
       <h2 id="t-crepuscule">Chambre <em>Crépuscule</em></h2>
       <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes et 1 enfant</strong></li><li><span>Lits</span><strong>2 lits simples 140 cm</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
+      <a class="bouton" href="contact.html?projet=gite#demande" data-calendrier="chateau">Demander mes dates</a>
     </div>
   </div>
 </dialog>
@@ -210,7 +208,7 @@
       <p class="sur-titre">Gîte A · Le château</p>
       <h2 id="t-coquelicot">Chambre <em>Coquelicot</em></h2>
       <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes</strong></li><li><span>Lits</span><strong>Un lit double de 180 cm ou 2 lits simples</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
+      <a class="bouton" href="contact.html?projet=gite#demande" data-calendrier="chateau">Demander mes dates</a>
     </div>
   </div>
 </dialog>
@@ -218,13 +216,13 @@
   <button class="fiche__fermer" type="button" aria-label="Fermer">×</button>
   <div class="fiche__boite">
     <div class="fiche__photos">
-      <img src="images/chateau-luirre-1.jpg" alt="La chambre Luirre et sa cheminée" loading="lazy" data-agrandir><img src="images/chateau-luirre-2.jpg" alt="Le lit de la chambre Luirre" loading="lazy" data-agrandir><img src="images/chateau-luirre-3.jpg" alt="L’armoire et le miroir de la chambre Luirre" loading="lazy" data-agrandir><img src="images/chateau-luirre-4.jpg" alt="La chambre Luirre et sa douche" loading="lazy" data-agrandir><img src="images/chateau-luirre-5.jpg" alt="Le coin douche de la chambre Luirre" loading="lazy" data-agrandir>
+      <img src="images/chateau-luirre-1.jpg" alt="Le lit de la chambre Luirre" loading="lazy" data-agrandir><img src="images/chateau-luirre-2.jpg" alt="La chambre Luirre et sa cheminée" loading="lazy" data-agrandir><img src="images/chateau-luirre-3.jpg" alt="L’armoire et le miroir de la chambre Luirre" loading="lazy" data-agrandir><img src="images/chateau-luirre-4.jpg" alt="La chambre Luirre et sa douche" loading="lazy" data-agrandir><img src="images/chateau-luirre-5.jpg" alt="Le coin douche de la chambre Luirre" loading="lazy" data-agrandir>
     </div>
     <div class="fiche__texte">
       <p class="sur-titre">Gîte A · Le château</p>
       <h2 id="t-luirre">Chambre <em>Luirre</em></h2>
       <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes</strong></li><li><span>Lits</span><strong>2 lits simples 140 cm</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
+      <a class="bouton" href="contact.html?projet=gite#demande" data-calendrier="chateau">Demander mes dates</a>
     </div>
   </div>
 </dialog>
@@ -238,7 +236,7 @@
       <p class="sur-titre">Gîte A · Le château</p>
       <h2 id="t-aiguille">Chambre <em>Aiguille</em></h2>
       <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes</strong></li><li><span>Lits</span><strong>2 lits simples</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
+      <a class="bouton" href="contact.html?projet=gite#demande" data-calendrier="chateau">Demander mes dates</a>
     </div>
   </div>
 </dialog>
@@ -252,7 +250,7 @@
       <p class="sur-titre">Gîte A · Le château</p>
       <h2 id="t-drome">Chambre <em>Drôme</em></h2>
       <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes et 1 bébé</strong></li><li><span>Lits</span><strong>2 lits simples 140 cm et un lit bébé pliant</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
+      <a class="bouton" href="contact.html?projet=gite#demande" data-calendrier="chateau">Demander mes dates</a>
     </div>
   </div>
 </dialog>
@@ -293,7 +291,7 @@
       </div>
     </div>
     <div class="pied__bas">
-      <span>© <span data-annee>2026</span> Domaine des Chabriers · <a href="mentions-legales.html">Mentions légales</a></span>
+      <span>© <span data-annee>2026</span> Domaine des Chabriers · <a href="mentions-legales.html">Mentions légales</a> · <a href="plan-du-site.html">Plan du site</a> · <a href="confidentialite.html">Confidentialité</a></span>
       <span>Maquette OBT Agency</span>
     </div>
   </div>

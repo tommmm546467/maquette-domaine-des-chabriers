@@ -735,6 +735,34 @@ dialog.visionneuse[open] { display: grid; place-items: center; animation: monte 
 .tableau-tarifs--saisons thead th:first-child { text-align: left; }
 .tableau-tarifs--saisons td { font-size: 24px; }
 
+/* 20. V3 (23/10) : plan en deux colonnes, hôtes compacts, mosaïque, grilles, avis, carte -------------- */
+.plan-haut { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 5vw, 70px); align-items: start; }
+.plan-haut .tete-section { margin: 0; }
+.plan__carte--carre { aspect-ratio: 1 / 1; }
+.plan--blocs .plan { grid-template-columns: 1fr; margin-top: clamp(30px, 4vw, 50px); }
+.section--compacte { padding: clamp(48px, 6vw, 80px) 0; }
+.hotes--compact { grid-template-columns: auto 1fr; gap: clamp(26px, 4vw, 64px); }
+.hotes__portraits { display: flex; align-items: center; }
+.hotes__portraits img { width: clamp(120px, 12vw, 160px); aspect-ratio: 1; height: auto; border-radius: 50%; object-fit: cover; border: 5px solid var(--blanc); box-shadow: var(--ombre-douce); }
+.hotes__portraits img + img { margin-left: -26px; }
+.hotes--compact h2 { margin-bottom: .3em; }
+.hotes--compact .citations { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
+.mosaique--longue { grid-auto-rows: 220px; }
+.mosaique--longue figure:nth-child(n) { grid-column: auto; grid-row: auto; }
+.mosaique--longue figure:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.mosaique--longue figure:nth-child(6), .mosaique--longue figure:nth-child(7), .mosaique--longue figure:nth-child(10) { grid-column: span 2; }
+.cases-grille { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.cases-grille .case { min-height: 360px; }
+.chambres--grille { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.carte-avis__note { display: flex; align-items: center; gap: 10px; margin: 0; }
+.carte-avis__note strong { font-size: 14px; color: var(--aubergine); }
+.carte-avis__titre { margin: 0; font-size: clamp(22px, 2vw, 26px); color: var(--aubergine); }
+.carte-avis--mariage blockquote { font-size: 18px; }
+.contact-carte { margin-top: 16px; border-radius: var(--rayon-petit); overflow: hidden; box-shadow: var(--ombre-douce); aspect-ratio: 16 / 9; max-width: 460px; background: var(--lin-fonce); }
+.contact-carte iframe { width: 100%; height: 100%; border: 0; display: block; }
+.plan-site { padding-left: 20px; }
+.plan-site li { margin-bottom: 10px; }
+
 /* 19. V3 : réceptions, les lieux et les avis -------------------------------- */
 .lieu__liste { justify-content: center; margin-top: 18px; }
 .etape__photo.diaporama { position: relative; }
@@ -753,7 +781,7 @@ dialog.visionneuse[open] { display: grid; place-items: center; animation: monte 
 .cal__fermer { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--blanc); color: var(--aubergine); font-size: 24px; cursor: pointer; box-shadow: var(--ombre-douce); }
 .cal__corps { flex: 1; overflow-y: auto; padding: 4px 26px 14px; }
 .cal__etiquette { font: 600 12px/1 var(--f-texte); letter-spacing: .14em; text-transform: uppercase; color: var(--aubergine); margin: 12px 0 10px; }
-.cal__logements { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.cal__logements { display: grid; grid-template-columns: 1fr; gap: 8px; }
 .cal__logement { text-align: left; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--lin-fonce); background: var(--blanc); color: var(--encre); font: inherit; cursor: pointer; transition: background .2s, border-color .2s; }
 .cal__logement strong { display: block; font-size: 14px; font-weight: 600; line-height: 1.25; }
 .cal__logement small { display: block; margin-top: 3px; font-size: 12px; line-height: 1.3; opacity: .75; }
@@ -797,8 +825,15 @@ body.cal-ouvert { overflow: hidden; }
   .entete.menu-ouvert .menu__chevron { display: none; }
   .plan__blocs { grid-template-columns: repeat(2, 1fr); }
   .galerie { grid-template-columns: repeat(3, 1fr); }
+  .cases-grille, .chambres--grille { grid-template-columns: repeat(2, 1fr); }
+  .hotes--compact .citations { grid-template-columns: 1fr; }
 }
 @media (max-width: 860px) {
+  .plan-haut, .hotes--compact { grid-template-columns: 1fr; }
+  .mosaique.mosaique--longue { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
+  .mosaique--longue figure:nth-child(n) { grid-column: auto; grid-row: auto; }
+  .mosaique--longue figure:nth-child(1), .mosaique--longue figure:nth-child(10) { grid-column: span 2; }
+  .mosaique--longue figcaption { transform: none; font-size: 18px; padding: 30px 14px 10px; }
   /* sur téléphone, le premier plan de la vidéo montre la maison à droite des arbres */
   .heros__video { object-position: 70% 50%; }
   .etapes-ferme, .tarifs-ferme { grid-template-columns: 1fr; }
@@ -812,7 +847,9 @@ body.cal-ouvert { overflow: hidden; }
   .cal__tete h2 { font-size: 28px; }
   .cal__corps { padding: 4px 18px 12px; }
   .cal__pied { padding: 14px 18px 18px; }
-  .cal__logements { grid-template-columns: 1fr 1fr; }
+  .cal__logements { grid-template-columns: 1fr; }
+  .cases-grille { grid-template-columns: 1fr; }
+  .chambres--grille { gap: 12px; }
   .plan__blocs { grid-template-columns: 1fr; }
   .bloc { flex-direction: row; }
   .bloc img { width: 38%; aspect-ratio: auto; }
