@@ -671,37 +671,153 @@ dialog.visionneuse[open] { display: grid; place-items: center; animation: monte 
   .agenda-vide p { font-size: 23px; }
 }
 
-/* 14. V2 : écran d'entrée et vidéo du hero ------------------------------------
-   Comme celui de T'Nature : la photo voilée et le logo, 2 secondes, puis le rideau monte (main.js).
-   Affiché à l'ouverture du site et au rechargement (décision dans le <head> de index.html, classe
-   sans-entree). Sans JavaScript, il ne s'affiche pas. */
-.entree { display: none; }
-.js:not(.sans-entree) .entree {
-  position: fixed; inset: 0; z-index: 200; display: grid; place-items: start center; padding-top: 20vh;
-  overflow: hidden; background: var(--aubergine-nuit);
-  transition: transform .9s cubic-bezier(.76, 0, .24, 1);
-}
-.entree.est-sortie { transform: translateY(-100%); }
-.entree__photo { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 58% 70%; animation: entree-zoom 3s ease-out both; }
-/* le logo est posé dans le ciel, au-dessus de la maison ; voile aubergine sur toute la photo, plus un halo sous le logo pour que le blanc se détache */
-.entree::after { content: ""; position: absolute; inset: 0; background: var(--aubergine-nuit); opacity: .42; }
-.entree__logo { position: relative; z-index: 1; animation: entree-logo .7s ease-out both; }
-.entree__logo::before { content: ""; position: absolute; inset: -40% -18%; background: radial-gradient(closest-side, rgba(46,26,43,.55), rgba(46,26,43,0)); pointer-events: none; }
-.entree__logo img { position: relative; width: clamp(260px, 34vw, 480px); height: auto; }
-.est-verrouille { overflow: hidden; }
-@keyframes entree-zoom { from { transform: scale(1); } to { transform: scale(1.06); } }
-@keyframes entree-logo { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-
+/* 14. Vidéo du hero (V2) -------------------------------------------------- */
 .heros__video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+/* 15. V3 : sous-menu des gîtes (comme La Maréchale) ------------------------ */
+.menu > li { position: relative; }
+.menu__chevron { width: 14px; height: 14px; margin-left: 4px; vertical-align: -2px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.menu a[aria-current="true"]::after { transform: scaleX(1); }
+.sous-menu {
+  position: absolute; top: calc(100% + 14px); left: 50%; transform: translate(-50%, 8px);
+  background: var(--blanc); color: var(--encre); border-radius: 16px; box-shadow: var(--ombre);
+  padding: 10px; min-width: 310px; opacity: 0; visibility: hidden; transition: opacity .25s, transform .25s, visibility .25s; z-index: 5;
+}
+.sous-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+.menu li:hover .sous-menu, .menu li:focus-within .sous-menu, .menu li.est-ouvert .sous-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.sous-menu a { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 10px; color: var(--encre); font-size: 15px; }
+.sous-menu a::after { display: none; }
+.sous-menu a:hover, .sous-menu a[aria-current="page"] { background: var(--lin); }
+.sous-menu img { width: 56px; height: 42px; object-fit: cover; border-radius: 8px; flex: none; }
+.sous-menu small { display: block; font-size: 12.5px; font-weight: 400; color: var(--texte); opacity: .8; margin-top: 2px; }
+
+/* 16. V3 : le plan en 4 blocs ------------------------------------------- */
+.plan--blocs { grid-template-columns: 1fr; }
+.plan--blocs .plan__carte { width: 100%; max-width: 1000px; margin-inline: auto; }
+.plan--blocs .point { cursor: default; display: grid; place-items: center; }
+.point.est-allume { background: var(--aubergine); color: #fff; animation: none; box-shadow: 0 0 0 6px rgba(255,255,255,.65); }
+.plan__blocs { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.bloc { display: flex; flex-direction: column; height: 100%; background: var(--blanc); border-radius: var(--rayon); overflow: hidden; box-shadow: var(--ombre-douce); text-decoration: none; color: inherit; position: relative; transition: transform .3s, box-shadow .3s; outline: none; }
+.bloc img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.bloc__lettre { position: absolute; top: 14px; left: 14px; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--abricot); color: var(--aubergine-nuit); font: 600 italic 24px/1 var(--f-titre); box-shadow: 0 6px 18px rgba(46,26,43,.25); }
+.bloc__texte { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px 22px; flex: 1; }
+.bloc__texte strong { font: 500 26px/1.1 var(--f-titre); color: var(--encre); }
+.bloc__texte small { font-size: 15px; line-height: 1.5; color: var(--texte); }
+.bloc__lien { margin-top: auto; padding-top: 10px; font-weight: 600; font-size: 14px; color: var(--aubergine); }
+.bloc__lien::after { content: " →"; }
+.bloc:hover, .bloc:focus-visible, .bloc.est-allume { transform: translateY(-4px); box-shadow: var(--ombre); }
+.bloc.est-allume .bloc__lettre { background: var(--aubergine); color: #fff; }
+
+/* 17. V3 : galeries, encarts et tarifs des gîtes ---------------------------- */
+.galerie__titre { margin: clamp(40px, 6vw, 70px) 0 18px; font-size: clamp(24px, 2.4vw, 32px); }
+.galerie { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.galerie img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--rayon-petit); cursor: zoom-in; transition: transform .4s, box-shadow .4s; }
+.galerie img:hover { transform: scale(1.03); box-shadow: var(--ombre-douce); }
+.galerie--4 { grid-template-columns: repeat(4, 1fr); }
+.encart__photo { display: grid; grid-template-rows: 1fr 1fr; gap: 0; min-height: 360px; }
+.encart__photo img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; }
+.case__photos { position: absolute; inset: 0; z-index: -2; }
+.compris { display: flex; align-items: center; gap: 16px; margin-top: 28px; padding: 18px 22px; border-radius: var(--rayon-petit); background: var(--lin-fonce); }
+.compris svg { width: 30px; height: 30px; flex: none; fill: none; stroke: var(--aubergine); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.compris p { margin: 0; }
+.compris strong { color: var(--aubergine); }
+.compris--encadre { background: var(--blanc); box-shadow: var(--ombre-douce); }
+.etapes-ferme { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.etape-ferme { background: var(--blanc); border-radius: var(--rayon); padding: clamp(26px, 3.5vw, 42px); box-shadow: var(--ombre-douce); }
+.etape-ferme__date { display: inline-block; margin-bottom: 14px; padding: 8px 16px; border-radius: 999px; background: var(--aubergine); color: #fff; font: 600 italic 20px/1 var(--f-titre); }
+.etape-ferme h3 { margin-top: 4px; }
+.tarifs-ferme { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(24px, 4vw, 50px); align-items: start; }
+.tarifs-ferme__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--rayon); box-shadow: var(--ombre-douce); }
+.tarifs-ferme__titre { margin: 0 0 14px; font-size: clamp(22px, 2.2vw, 28px); }
+.tarifs-ferme__titre em { font-size: .8em; }
+.tarifs-ferme .tableau-tarifs + .tarifs-ferme__titre { margin-top: 34px; }
+.tableau-tarifs--saisons thead th { font: 600 12px/1.2 var(--f-texte); letter-spacing: .12em; text-transform: uppercase; color: var(--aubergine); text-align: right; padding-block: 16px; background: var(--lin); }
+.tableau-tarifs--saisons thead th:first-child { text-align: left; }
+.tableau-tarifs--saisons td { font-size: 24px; }
+
+/* 19. V3 : réceptions, les lieux et les avis -------------------------------- */
+.lieu__liste { justify-content: center; margin-top: 18px; }
+.etape__photo.diaporama { position: relative; }
+.temoin__titre { font: 500 italic clamp(22px, 2vw, 28px)/1.2 var(--f-titre); color: var(--aubergine); margin: 0 0 12px; }
+
+/* 18. V3 : le panneau Calendrier, à droite (js/calendrier.js) --------------- */
+.cal { position: fixed; inset: 0; z-index: 300; }
+.cal[hidden] { display: none; }
+.cal__voile { position: absolute; inset: 0; background: rgba(46,26,43,.45); opacity: 0; transition: opacity .35s; }
+.cal__panneau { position: absolute; top: 0; right: 0; bottom: 0; width: min(460px, 100%); display: flex; flex-direction: column; background: var(--lin); color: var(--texte); box-shadow: -20px 0 60px rgba(46,26,43,.25); transform: translateX(100%); transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.cal.est-ouvert .cal__voile { opacity: 1; }
+.cal.est-ouvert .cal__panneau { transform: none; }
+.cal__tete { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 26px 26px 8px; }
+.cal__tete h2 { font-size: 34px; margin: 0; }
+.cal__tete .sur-titre { margin-bottom: 8px; }
+.cal__fermer { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--blanc); color: var(--aubergine); font-size: 24px; cursor: pointer; box-shadow: var(--ombre-douce); }
+.cal__corps { flex: 1; overflow-y: auto; padding: 4px 26px 14px; }
+.cal__etiquette { font: 600 12px/1 var(--f-texte); letter-spacing: .14em; text-transform: uppercase; color: var(--aubergine); margin: 12px 0 10px; }
+.cal__logements { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.cal__logement { text-align: left; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--lin-fonce); background: var(--blanc); color: var(--encre); font: inherit; cursor: pointer; transition: background .2s, border-color .2s; }
+.cal__logement strong { display: block; font-size: 14px; font-weight: 600; line-height: 1.25; }
+.cal__logement small { display: block; margin-top: 3px; font-size: 12px; line-height: 1.3; opacity: .75; }
+.cal__logement[aria-pressed="true"] { background: var(--aubergine); border-color: var(--aubergine); color: #fff; }
+.cal__nav { display: flex; align-items: center; justify-content: space-between; margin: 22px 0 10px; }
+.cal__titre-mois { margin: 0; font-size: 26px; }
+.cal__titre-mois::first-letter { text-transform: uppercase; }
+.cal__fleche { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--lin-fonce); background: var(--blanc); color: var(--aubergine); font-size: 18px; cursor: pointer; }
+.cal__fleche:disabled { opacity: .35; cursor: default; }
+.cal__jours, .cal__grille { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal__jours span { text-align: center; font-size: 11.5px; opacity: .7; padding-bottom: 4px; }
+.cal__jour { aspect-ratio: 1; border: 0; border-radius: 10px; font: 500 15px/1 var(--f-texte); cursor: pointer; transition: box-shadow .15s; }
+.cal__jour--libre { background: #E3EEDD; color: #2E5130; }
+.cal__jour--reserve { background: #F1D8DB; color: #8A3846; text-decoration: line-through; }
+.cal__jour--ferme { background: var(--lin-fonce); color: rgba(75,62,72,.5); }
+.cal__jour--passe { background: transparent; color: rgba(75,62,72,.35); cursor: default; }
+.cal__jour:hover:not(:disabled) { box-shadow: inset 0 0 0 2px var(--abricot); }
+.cal__jour.est-arrivee, .cal__jour.est-depart { background: var(--aubergine); color: #fff; text-decoration: none; }
+.cal__jour.est-dans { background: var(--mauve-clair); color: var(--aubergine); }
+.cal__legende { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; }
+.cal__legende li { display: flex; align-items: center; gap: 6px; }
+.cal__pastille { width: 14px; height: 14px; border-radius: 4px; }
+.cal__pastille--libre { background: #E3EEDD; box-shadow: inset 0 0 0 1px #9CBF8F; }
+.cal__pastille--reserve { background: #F1D8DB; box-shadow: inset 0 0 0 1px #D79AA4; }
+.cal__pastille--ferme { background: var(--lin-fonce); }
+.cal__pied { padding: 16px 26px 22px; background: var(--blanc); border-top: 1px solid var(--lin-fonce); }
+.cal__choix { margin: 0 0 12px; font-size: 14.5px; line-height: 1.45; min-height: 2.9em; }
+.cal__choix strong { color: var(--aubergine); }
+.cal__continuer { width: 100%; }
+.cal__continuer[aria-disabled="true"] { opacity: .5; box-shadow: none; transform: none; cursor: not-allowed; }
+.cal__note { margin: 10px 0 0; font-size: 12px; text-align: center; opacity: .6; }
+body.cal-ouvert { overflow: hidden; }
+
+@media (max-width: 1100px) {
+  .entete.menu-ouvert .menu { overflow-y: auto; padding-bottom: 110px; }
+  .entete.menu-ouvert .sous-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: transparent; padding: 0 0 6px 2px; min-width: 0; }
+  .entete.menu-ouvert .sous-menu::before { display: none; }
+  .entete.menu-ouvert .sous-menu a { font: 400 18px/1.3 var(--f-texte); color: rgba(255,255,255,.86); padding: 5px 0; }
+  .entete.menu-ouvert .sous-menu a:hover, .entete.menu-ouvert .sous-menu a[aria-current="page"] { background: transparent; color: var(--abricot-vif); }
+  .entete.menu-ouvert .sous-menu img, .entete.menu-ouvert .sous-menu small { display: none; }
+  .entete.menu-ouvert .menu__chevron { display: none; }
+  .plan__blocs { grid-template-columns: repeat(2, 1fr); }
+  .galerie { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 860px) {
-  .entree__photo { object-position: 64% 75%; }
-  .js:not(.sans-entree) .entree { padding-top: 17vh; }
-  .entree__logo img { width: 74vw; }
   /* sur téléphone, le premier plan de la vidéo montre la maison à droite des arbres */
   .heros__video { object-position: 70% 50%; }
+  .etapes-ferme, .tarifs-ferme { grid-template-columns: 1fr; }
+  .tarifs-ferme__photo img { aspect-ratio: 16 / 10; }
+  .galerie, .galerie--4 { grid-template-columns: repeat(2, 1fr); }
+  .encart__photo { min-height: 0; grid-template-rows: none; grid-template-columns: 1fr 1fr; }
+  .encart__photo img { aspect-ratio: 1; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .entree__photo, .entree__logo { animation: none; }
-  .js:not(.sans-entree) .entree { transition: none; }
+@media (max-width: 560px) {
+  .cal__tete { padding: 20px 18px 6px; }
+  .cal__tete h2 { font-size: 28px; }
+  .cal__corps { padding: 4px 18px 12px; }
+  .cal__pied { padding: 14px 18px 18px; }
+  .cal__logements { grid-template-columns: 1fr 1fr; }
+  .plan__blocs { grid-template-columns: 1fr; }
+  .bloc { flex-direction: row; }
+  .bloc img { width: 38%; aspect-ratio: auto; }
+  .bloc__lettre { width: 36px; height: 36px; font-size: 20px; top: 10px; left: 10px; }
+  .bloc__texte strong { font-size: 22px; }
+  .tableau-tarifs--saisons th, .tableau-tarifs--saisons td { padding: 14px 12px; }
+  .tableau-tarifs--saisons td { font-size: 19px; }
 }

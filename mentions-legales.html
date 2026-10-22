@@ -24,13 +24,14 @@
     <nav aria-label="Menu principal">
       <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="gite.html">Le gîte</a></li>
+        <li class="menu__gites"><a href="gite.html">Les gîtes<svg class="menu__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="sous-menu"><a href="gite.html"><img src="images/vue-domaine-plongee.jpg" alt="" loading="lazy"><span>Tous les gîtes<small>Pour votre groupe</small></span></a><a href="gite-chateau.html"><img src="images/chateau-facade.jpg" alt="" loading="lazy"><span>Gîte A · Le château<small>14 personnes · 6 chambres</small></span></a><a href="gite-ferme.html"><img src="images/ferme-1.jpg" alt="" loading="lazy"><span>Gîte C · La ferme<small>Ouverture en avril 2027</small></span></a><a href="tarifs.html"><img src="images/piscine.jpg" alt="" loading="lazy"><span>Voir les tarifs<small>Le château et la ferme</small></span></a></div></li>
         <li><a href="receptions.html">Mariages et réceptions</a></li>
         <li><a href="stages.html">Stages</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <a class="bouton entete__appel" href="contact.html#demande">Demander une date</a>
+    <a class="bouton entete__appel" href="contact.html#demande" data-calendrier>Calendrier</a>
     <button class="entete__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
   </div>
 </div>
@@ -44,7 +45,7 @@
     <p>Ce site est une maquette réalisée par OBT Agency pour présenter une refonte du site domainedeschabriers.com au Domaine des Chabriers. Ce n’est pas le site officiel du domaine. Les textes et les photos viennent du site actuel du domaine et de sa fiche Google ; ils lui appartiennent et seront retirés à sa demande.</p>
 
     <h2>Éditeur du site</h2>
-    <p>Domaine des Chabriers, SARL, SIREN 827 852 609, 470 route de la Salette, Les Chabriers, 26120 Ourches. Téléphone : 04 75 40 00 65. E-mail : contact@domainedeschabriers.com.</p>
+    <p>Domaine des Chabriers, SARL, SIREN 827 852 609, 470 route de la Salette, Les Chabriers, 26120 Ourches. Téléphone : 04 75 40 00 65. E-mail : domainedeschabriers@gmail.com.</p>
     <p>Responsable de la publication : Yves Duverney, gérant.</p>
 
     <h2>Conception et hébergement</h2>
@@ -73,7 +74,7 @@
         <h3>Le domaine</h3>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="gite.html">Le gîte</a></li>
+          <li><a href="gite.html">Les gîtes</a></li>
           <li><a href="receptions.html">Mariages et réceptions</a></li>
           <li><a href="stages.html">Stages</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -84,7 +85,7 @@
         <ul>
           <li><a href="tel:+33475400065">04 75 40 00 65</a></li>
           <li><a href="tel:+33628239021">06 28 23 90 21</a></li>
-          <li><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></li>
+          <li><a href="mailto:domainedeschabriers@gmail.com">domainedeschabriers@gmail.com</a></li>
           <li><a href="http://www.facebook.com/domainedeschabriers" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
@@ -104,5 +105,7 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/disponibilites.js"></script>
+<script src="js/calendrier.js"></script>
 </body>
 </html>

@@ -21,28 +21,7 @@
     });
   }
 
-  /* Écran d'entrée (V2) : 2 secondes, puis il monte comme un rideau (comme T'Nature) ---- */
-  // La décision de l'afficher est prise dans le <head> de l'accueil (classe sans-entree).
-  // C'est une durée d'affichage, comptée dès l'exécution du script, pas une attente du chargement.
-  var entree = $('#entree');
   var video = $('.heros__video');
-  if (entree) {
-    var retirer = function () { if (entree.parentNode) entree.parentNode.removeChild(entree); document.body.classList.remove('est-verrouille'); };
-    if (document.documentElement.classList.contains('sans-entree')) retirer();
-    else {
-      document.body.classList.add('est-verrouille');
-      var sortir = function () {
-        entree.classList.add('est-sortie');
-        // la vidéo repart de son premier plan pendant que le rideau monte
-        if (video) { try { video.currentTime = 0; video.play(); } catch (e) {} }
-        var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        setTimeout(retirer, reduit ? 0 : 900);
-      };
-      setTimeout(sortir, 2000);
-      // retour arrière servi depuis le cache du navigateur : le minuteur a pu ne pas repartir
-      window.addEventListener('pageshow', function (ev) { if (ev.persisted) retirer(); });
-    }
-  }
   // Certains navigateurs bloquent la lecture automatique : on la relance une fois, sinon l'affiche reste.
   if (video && video.paused) { var p = video.play(); if (p && p.catch) p.catch(function () {}); }
 
@@ -110,26 +89,19 @@
     if (cible && cible.tagName === 'DIALOG') cible.showModal();
   }
 
-  /* Plan du domaine ----------------------------------------------------- */
-  var plan = $('.plan');
+  /* Plan du domaine : chaque bloc allume sa lettre sur la carte -------------- */
+  var plan = $('.plan--blocs');
   if (plan) {
-    var fiche = $('.plan__fiche', plan);
-    var choisir = function (point) {
-      $$('.point', plan).forEach(function (p) { p.setAttribute('aria-pressed', p === point); });
-      var img = $('img', fiche);
-      img.src = point.getAttribute('data-photo');
-      img.alt = point.getAttribute('data-alt');
-      $('.plan__lettre', fiche).textContent = 'Bâtiment ' + point.textContent.trim();
-      var titre = $('h3', fiche);
-      titre.textContent = point.getAttribute('data-titre');
-      if (point.hasAttribute('data-prive')) {
-        var badge = document.createElement('span');
-        badge.className = 'plan__prive'; badge.textContent = 'Privé';
-        titre.appendChild(badge);
-      }
-      $('p', fiche).textContent = point.getAttribute('data-texte');
+    var allumer = function (lettre) {
+      $$('[data-bloc]', plan).forEach(function (el) { el.classList.toggle('est-allume', el.getAttribute('data-bloc') === lettre); });
     };
-    $$('.point', plan).forEach(function (p) { p.addEventListener('click', function () { choisir(p); }); });
+    $$('.bloc', plan).forEach(function (b) {
+      var lettre = b.getAttribute('data-bloc');
+      b.addEventListener('mouseenter', function () { allumer(lettre); });
+      b.addEventListener('focusin', function () { allumer(lettre); });
+      b.addEventListener('mouseleave', function () { allumer(null); });
+      b.addEventListener('focusout', function () { allumer(null); });
+    });
   }
 
   /* Carrousel centré, voisines floutées, en boucle --------------------- */
@@ -350,7 +322,7 @@
       });
       var message = $('[name="message"]', form).value.trim();
       if (message) lignes.push('', message);
-      var lien = 'mailto:contact@domainedeschabriers.com?subject=' + encodeURIComponent('Demande depuis le site : ' + $('label[for="' + choix.id + '"]', form).textContent) + '&body=' + encodeURIComponent(lignes.join('\n'));
+      var lien = 'mailto:domainedeschabriers@gmail.com?subject=' + encodeURIComponent('Demande depuis le site : ' + $('label[for="' + choix.id + '"]', form).textContent) + '&body=' + encodeURIComponent(lignes.join('\n'));
       var merci = $('.formulaire__merci');
       form.hidden = true; merci.hidden = false;
       $('a', merci).href = lien;

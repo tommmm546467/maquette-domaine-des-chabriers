@@ -24,13 +24,14 @@
     <nav aria-label="Menu principal">
       <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="gite.html">Le gîte</a></li>
+        <li class="menu__gites"><a href="gite.html">Les gîtes<svg class="menu__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="sous-menu"><a href="gite.html"><img src="images/vue-domaine-plongee.jpg" alt="" loading="lazy"><span>Tous les gîtes<small>Pour votre groupe</small></span></a><a href="gite-chateau.html"><img src="images/chateau-facade.jpg" alt="" loading="lazy"><span>Gîte A · Le château<small>14 personnes · 6 chambres</small></span></a><a href="gite-ferme.html"><img src="images/ferme-1.jpg" alt="" loading="lazy"><span>Gîte C · La ferme<small>Ouverture en avril 2027</small></span></a><a href="tarifs.html"><img src="images/piscine.jpg" alt="" loading="lazy"><span>Voir les tarifs<small>Le château et la ferme</small></span></a></div></li>
         <li><a href="receptions.html" aria-current="page">Mariages et réceptions</a></li>
         <li><a href="stages.html">Stages</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <a class="bouton entete__appel" href="contact.html#demande">Demander une date</a>
+    <a class="bouton entete__appel" href="contact.html#demande" data-calendrier>Calendrier</a>
     <button class="entete__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
   </div>
 </div>
@@ -41,7 +42,7 @@
   <div class="heros__contenu">
     <a class="note-heros" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span class="etoiles" aria-hidden="true">★★★★★</span><strong>4,7</strong><span>sur Google · 24 avis</span></a>
     <h1>Faites la fête <em>aux Chabriers</em></h1>
-    <p class="heros__sous">Une salle de plus de 300 m², un parc de 3 hectares et une cour en pierre : tout pour un mariage, un anniversaire ou un concert dont on se souvient.</p>
+    <p class="heros__sous">Une salle de plus de 300 m², un parc de 3 hectares et 2 cours en pierre : tout pour un mariage, un anniversaire ou un concert dont on se souvient.</p>
     <div class="boutons">
       <a class="bouton" href="contact.html?projet=mariage#demande">Parler de mon événement</a>
       <a class="bouton bouton--clair" href="#jour-j">Voir les mariages</a>
@@ -65,7 +66,109 @@
       <figure class="diapo"><img src="images/salle-fanions.jpg" alt="La salle décorée de fanions" loading="lazy"><figcaption>En fête</figcaption></figure>
       <figure class="diapo"><img src="images/concert.jpg" alt="Un concert dans la salle, lumières vertes" loading="lazy"><figcaption>Un concert</figcaption></figure>
       <figure class="diapo"><img src="images/salle-nuit.jpg" alt="La salle illuminée vue du parc, la nuit" loading="lazy"><figcaption>La nuit</figcaption></figure>
-      <figure class="diapo"><img src="images/salle-vide.jpg" alt="La salle vide, baies ouvertes sur la campagne" loading="lazy"><figcaption>Avant la fête</figcaption></figure>
+      <figure class="diapo"><img src="images/salle-dressee.jpg" alt="La salle dressée pour un grand dîner, guirlandes allumées" loading="lazy"><figcaption>Prête pour le dîner</figcaption></figure>
+    </div>
+    <button class="carrousel__fleche carrousel__fleche--g" type="button" aria-label="Photo précédente">←</button>
+    <button class="carrousel__fleche carrousel__fleche--d" type="button" aria-label="Photo suivante">→</button>
+    <div class="carrousel__points"></div>
+  </div>
+</section>
+
+<section class="section section--lin-fonce" id="cour-chateau">
+  <div class="envelop">
+    <div class="tete-section tete-section--centre apparait">
+      <p class="sur-titre">La cour du château</p>
+      <h2>Une armure vous accueille, <em>soyez courtois !</em></h2>
+      <p class="chapeau">Anniversaires, stages et brunchs. La cour peut être couverte avec 3 barnums, les bars sont mobiles. Le plus : sa cuisine d’été !</p>
+    </div>
+  </div>
+  <div class="carrousel apparait apparait--2" data-carrousel>
+    <div class="carrousel__piste">
+      <figure class="diapo"><img src="images/cour1-vue.jpg" alt="La cour du château, sa tour et son porche" loading="lazy"><figcaption>La cour et sa tour</figcaption></figure>
+      <figure class="diapo"><img src="images/cour1-cuisine-ete.jpg" alt="La cuisine d’été ouverte sur la cour" loading="lazy"><figcaption>La cuisine d’été</figcaption></figure>
+      <figure class="diapo"><img src="images/cour1-cuisine-ete-groupe.jpg" alt="Un groupe aux fourneaux de la cuisine d’été" loading="lazy"><figcaption>Aux fourneaux</figcaption></figure>
+      <figure class="diapo"><img src="images/cour1-brunch.jpg" alt="Un brunch dans la cour, autour d’un food truck" loading="lazy"><figcaption>Un brunch</figcaption></figure>
+      <figure class="diapo"><img src="images/cour1-barnums.jpg" alt="La cour couverte de barnums pour un repas" loading="lazy"><figcaption>Sous les barnums</figcaption></figure>
+      <figure class="diapo"><img src="images/cour1-anniversaire-soir.jpg" alt="Un anniversaire le soir, sous les barnums illuminés" loading="lazy"><figcaption>Un anniversaire</figcaption></figure>
+      <figure class="diapo"><img src="images/cour1-soiree.jpg" alt="Un soir dans la cour, guirlandes allumées" loading="lazy"><figcaption>Le soir</figcaption></figure>
+      <figure class="diapo"><img src="images/cour1-porche.jpg" alt="Le porche de la cour" loading="lazy"><figcaption>Le porche</figcaption></figure>
+    </div>
+    <button class="carrousel__fleche carrousel__fleche--g" type="button" aria-label="Photo précédente">←</button>
+    <button class="carrousel__fleche carrousel__fleche--d" type="button" aria-label="Photo suivante">→</button>
+    <div class="carrousel__points"></div>
+  </div>
+</section>
+
+<section class="section" id="cour-ferme">
+  <div class="envelop">
+    <div class="tete-section tete-section--centre apparait">
+      <p class="sur-titre">La cour de la ferme</p>
+      <h2>Une grande cour avec préau, <em>pour faire la fête jusqu’au chant du coq !</em></h2>
+      <p class="chapeau">Un espace modulable : mariage, anniversaire, stage de poterie… Son atout : le grand préau couvert, pour 100 personnes.</p>
+    </div>
+  </div>
+  <div class="carrousel apparait apparait--2" data-carrousel>
+    <div class="carrousel__piste">
+      <figure class="diapo"><img src="images/cour2-vue.jpg" alt="La cour de la ferme et son préau" loading="lazy"><figcaption>La cour de la ferme</figcaption></figure>
+      <figure class="diapo"><img src="images/cour2-preau.jpg" alt="Le grand préau couvert, ouvert sur la cour" loading="lazy"><figcaption>Le grand préau</figcaption></figure>
+      <figure class="diapo"><img src="images/cour2-tables.jpg" alt="De longues tables dressées sous le préau" loading="lazy"><figcaption>Les tables sous le préau</figcaption></figure>
+      <figure class="diapo"><img src="images/cour2-groupe.jpg" alt="Des invités dans la cour de la ferme" loading="lazy"><figcaption>Entre amis</figcaption></figure>
+      <figure class="diapo"><img src="images/cour2-preau-repli.jpg" alt="Le préau aménagé pour une réception" loading="lazy"><figcaption>Le préau aménagé</figcaption></figure>
+      <figure class="diapo"><img src="images/cour2-decor.jpg" alt="Un coin photo sous le préau" loading="lazy"><figcaption>Le coin photo</figcaption></figure>
+      <figure class="diapo"><img src="images/cour2-soiree.jpg" alt="Une soirée sous le préau, guirlandes allumées" loading="lazy"><figcaption>En soirée</figcaption></figure>
+      <figure class="diapo"><img src="images/cour2-nuit.jpg" alt="La cour de la ferme illuminée la nuit" loading="lazy"><figcaption>La nuit</figcaption></figure>
+    </div>
+    <button class="carrousel__fleche carrousel__fleche--g" type="button" aria-label="Photo précédente">←</button>
+    <button class="carrousel__fleche carrousel__fleche--d" type="button" aria-label="Photo suivante">→</button>
+    <div class="carrousel__points"></div>
+  </div>
+</section>
+
+<section class="section section--lin-fonce" id="parc">
+  <div class="envelop">
+    <div class="tete-section tete-section--centre apparait">
+      <p class="sur-titre">Le parc de 3 ha</p>
+      <h2>Ses arbres centenaires, <em>un horizon ouvert…</em></h2>
+      <p class="chapeau">Tout inspire la sérénité. En fonction des saisons, les espaces varient : le mobilier suit !</p>
+    </div>
+  </div>
+  <div class="carrousel apparait apparait--2" data-carrousel>
+    <div class="carrousel__piste">
+      <figure class="diapo"><img src="images/parc-diner.jpg" alt="Un dîner dans le parc, devant le château" loading="lazy"><figcaption>Un dîner dans le parc</figcaption></figure>
+      <figure class="diapo"><img src="images/parc-invites.jpg" alt="Les invités dans le parc, sous les arbres" loading="lazy"><figcaption>Sous les arbres</figcaption></figure>
+      <figure class="diapo"><img src="images/parc-cocktail.jpg" alt="Un cocktail à l’ombre des grands arbres" loading="lazy"><figcaption>Le cocktail</figcaption></figure>
+      <figure class="diapo"><img src="images/parc-cedre-ceremonie.jpg" alt="Une cérémonie sous le grand cèdre" loading="lazy"><figcaption>Sous le cèdre</figcaption></figure>
+      <figure class="diapo"><img src="images/parc-ceremonie.jpg" alt="Les chaises d’une cérémonie laïque dans le parc" loading="lazy"><figcaption>La cérémonie</figcaption></figure>
+      <figure class="diapo"><img src="images/parc-fontaine-2.jpg" alt="Les invités autour de la pièce d’eau" loading="lazy"><figcaption>La pièce d’eau</figcaption></figure>
+      <figure class="diapo"><img src="images/parc-fontaine.jpg" alt="La fontaine du parc" loading="lazy"><figcaption>La fontaine</figcaption></figure>
+      <figure class="diapo"><img src="images/parc-vue-cedre.jpg" alt="Le parc et ses grands arbres" loading="lazy"><figcaption>Le parc</figcaption></figure>
+    </div>
+    <button class="carrousel__fleche carrousel__fleche--g" type="button" aria-label="Photo précédente">←</button>
+    <button class="carrousel__fleche carrousel__fleche--d" type="button" aria-label="Photo suivante">→</button>
+    <div class="carrousel__points"></div>
+  </div>
+</section>
+
+<section class="section" id="espaces">
+  <div class="envelop">
+    <div class="tete-section tete-section--centre apparait">
+      <p class="sur-titre">Les espaces fonctionnels</p>
+      <h2>Bienvenue au parking : <em>il n’accueille plus de poules mais vos carrosses !</em></h2>
+      <p class="chapeau">Tout est prévu pour vos invités et vos prestataires.</p>
+      <ul class="pastilles pastilles--claires lieu__liste"><li>Parking couvert de 40 voitures</li><li>Pool house de la piscine : sanitaires pour le parc et les transats</li><li>2 espaces traiteur dans la salle de réception</li><li>2 sanitaires, dont 1 PMR</li></ul>
+    </div>
+  </div>
+  <div class="carrousel apparait apparait--2" data-carrousel>
+    <div class="carrousel__piste">
+      <figure class="diapo"><img src="images/parking-dehors.jpg" alt="Le hangar du parking couvert, vu de l’extérieur" loading="lazy"><figcaption>Le parking couvert</figcaption></figure>
+      <figure class="diapo"><img src="images/parking-dedans.jpg" alt="Les voitures à l’abri sous le hangar" loading="lazy"><figcaption>À l’abri</figcaption></figure>
+      <figure class="diapo"><img src="images/piscine-poolhouse.jpg" alt="La piscine et son pool house" loading="lazy"><figcaption>La piscine et son pool house</figcaption></figure>
+      <figure class="diapo"><img src="images/vue-petanque.jpg" alt="Le terrain de pétanque et la piscine" loading="lazy"><figcaption>La pétanque</figcaption></figure>
+      <figure class="diapo"><img src="images/salle-traiteur-1.jpg" alt="L’espace traiteur de la salle de réception" loading="lazy"><figcaption>L’espace traiteur</figcaption></figure>
+      <figure class="diapo"><img src="images/salle-traiteur-2.jpg" alt="Le second espace traiteur de la salle" loading="lazy"><figcaption>Le second espace traiteur</figcaption></figure>
+      <figure class="diapo"><img src="images/salle-traiteur-3.jpg" alt="Le plan de travail de l’espace traiteur" loading="lazy"><figcaption>Pour le traiteur</figcaption></figure>
+      <figure class="diapo"><img src="images/salle-sanitaires-1.jpg" alt="Les sanitaires de la salle de réception" loading="lazy"><figcaption>Les sanitaires</figcaption></figure>
+      <figure class="diapo"><img src="images/salle-sanitaires-2.jpg" alt="Les sanitaires accessibles aux personnes à mobilité réduite" loading="lazy"><figcaption>Sanitaires PMR</figcaption></figure>
     </div>
     <button class="carrousel__fleche carrousel__fleche--g" type="button" aria-label="Photo précédente">←</button>
     <button class="carrousel__fleche carrousel__fleche--d" type="button" aria-label="Photo suivante">→</button>
@@ -92,7 +195,7 @@
         </div>
       </div>
       <div class="etape apparait" data-num="2">
-        <div class="etape__photo"><img src="images/parc.jpg" alt="La grande pelouse du parc bordée d’arbres" loading="lazy"></div>
+        <div class="etape__photo"><img src="images/parc-fontaine-2.jpg" alt="Les invités autour de la pièce d’eau du parc" loading="lazy"></div>
         <div>
           <span class="etape__lieu">Le parc</span>
           <h3>L’apéritif <em>sous les arbres</em></h3>
@@ -101,7 +204,7 @@
         </div>
       </div>
       <div class="etape apparait" data-num="3">
-        <div class="etape__photo"><img src="images/salle-diner.jpg" alt="La salle dressée pour le dîner" loading="lazy"></div>
+        <div class="etape__photo diaporama" data-diaporama><img class="est-visible" src="images/mariage-tm128.jpg" alt="La première danse des mariés dans la salle" loading="lazy"><img src="images/mariage-tm93.jpg" alt="Les mariés devant la pièce montée, dans la salle" loading="lazy"></div>
         <div>
           <span class="etape__lieu">La salle</span>
           <h3>Le dîner <em>et la danse</em></h3>
@@ -110,7 +213,7 @@
         </div>
       </div>
       <div class="etape apparait" data-num="4">
-        <div class="etape__photo"><img src="images/evenement-cour.jpg" alt="Les invités dans la cour, au pied de la tour" loading="lazy"></div>
+        <div class="etape__photo"><img src="images/cour1-brunch.jpg" alt="Un brunch dans la cour, au pied de la tour" loading="lazy"></div>
         <div>
           <span class="etape__lieu">La cour</span>
           <h3>Le brunch <em>du lendemain</em></h3>
@@ -131,32 +234,34 @@
     <div class="portes apparait apparait--2">
       <a class="porte" href="contact.html?projet=mariage#demande">
         <img src="images/mariage-table.jpg" alt="Une table de mariage dressée dans la salle" loading="lazy">
-        <span class="porte__num">01</span><span class="porte__verbe">À partir de 4 000 €</span>
+        <span class="porte__num">01</span><span class="porte__verbe">De 4 000 € à 8 600 €</span>
         <div class="porte__bas">
           <h3>Les mariages</h3>
-          <p>Le mariage dont vous rêvez, avec un devis fait pour vous.</p>
+          <p>Privatisation du domaine entier, de nuit.</p>
           <span class="bouton">Faire une demande</span>
         </div>
       </a>
       <a class="porte" href="contact.html?projet=fete#demande">
         <img src="images/salle-ecran.jpg" alt="La salle dressée, écran au fond" loading="lazy">
-        <span class="porte__num">02</span><span class="porte__verbe">1 800 € la soirée</span>
+        <span class="porte__num">02</span><span class="porte__verbe">De 1 100 € à 1 800 €</span>
         <div class="porte__bas">
           <h3>Anniversaires, retrouvailles</h3>
           <p>Votre anniversaire en plein air, avec une salle de 150 places assises rien que pour vous.</p>
           <span class="bouton">Réserver la salle</span>
         </div>
       </a>
-      <a class="porte" href="contact.html?projet=concert#demande">
-        <img src="images/piano.jpg" alt="Un pianiste pendant une soirée au domaine" loading="lazy">
+      <a class="porte" href="contact.html?projet=fete#demande">
+        <img src="images/parc-diner.jpg" alt="Un dîner dans le parc, devant le château" loading="lazy">
         <span class="porte__num">03</span><span class="porte__verbe">Sur demande</span>
         <div class="porte__bas">
-          <h3>Concerts, spectacles</h3>
-          <p>Un concert ou un spectacle sur mesure. Pensez juste à prévoir la sono.</p>
+          <h3>La journée et la soirée</h3>
+          <p>Privatisation totale, avec 2 logements pour la nuit.</p>
           <span class="bouton">En parler</span>
         </div>
       </a>
     </div>
+    <h3 class="galerie__titre apparait">Salon, festival, <em>exposition</em></h3>
+    <div class="galerie galerie--4 apparait apparait--2"><img src="images/salon-oeufs.jpg" alt="Une exposition d’œufs géants dans le parc" loading="lazy" data-agrandir><img src="images/salon-stand.jpg" alt="Un stand d’exposant sous les arbres" loading="lazy" data-agrandir><img src="images/salon-visiteurs.jpg" alt="Des visiteurs dans le parc pendant un salon" loading="lazy" data-agrandir><img src="images/salon-cour.jpg" alt="Un salon devant le château" loading="lazy" data-agrandir><img src="images/salon-marche.jpg" alt="Des exposants dans le parc" loading="lazy" data-agrandir><img src="images/salon-buffet.jpg" alt="Un buffet dans la cour pendant un salon" loading="lazy" data-agrandir><img src="images/salon-decor.jpg" alt="Un décor d’exposition dans le parc" loading="lazy" data-agrandir><img src="images/salon-accueil.jpg" alt="L’accueil d’un salon dans le parc" loading="lazy" data-agrandir></div>
   </div>
 </section>
 
@@ -183,39 +288,21 @@
   </div>
 </section>
 
-<section class="section" id="dormir">
-  <div class="envelop">
-    <div class="tete-section apparait">
-      <p class="sur-titre">Dormir sur place</p>
-      <h2>Vos proches <em>restent la nuit</em></h2>
-    </div>
-    <div class="dormir">
-      <a class="apparait" href="gite.html#chambres">
-        <img src="images/nature-1.jpg" alt="La chambre Nature du gîte" loading="lazy">
-        <div><h3>Le gîte</h3><p>6 chambres avec salle d’eau, à deux pas de la salle.</p></div>
-      </a>
-      <a class="apparait apparait--2" href="gite.html#dortoir">
-        <span class="photo-a-prevoir"><strong>Photo à prévoir</strong>Le dortoir du grenier.</span>
-        <div><h3>Le dortoir du grenier</h3><p>20 couchages au grenier. 15 de plus arrivent en 2027.</p></div>
-      </a>
-    </div>
-  </div>
-</section>
-
 <section class="section section--lin-fonce" id="temoignages">
   <div class="envelop temoins" data-temoins>
-    <div class="temoins__photo apparait"><img src="images/salle-tables-rondes.jpg" alt="Un mariage au domaine" loading="lazy"></div>
+    <div class="temoins__photo apparait"><img src="images/mariage-tm13.jpg" alt="Un mariage au domaine" loading="lazy"></div>
     <div class="apparait apparait--2">
       <p class="sur-titre">Ils se sont mariés ici</p>
       <div class="temoins__liste">
-        <article class="temoin" data-photo="images/salle-tables-rondes.jpg"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Un lieu magnifique et intime pour notre mariage. Céline réserve mieux qu'un accueil, un accompagnement discret et efficace pour organiser ce moment si cher !</blockquote><footer>Marc D., sur Google</footer></article>
-        <article class="temoin" data-photo="images/cour-tour.jpg"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Un lieu magnifique pour un mariage ! Le parc est splendide, le château en pierres a beaucoup de charme et la cour est idéale pour un brunch.</blockquote><footer>Noémie R., sur Google</footer></article>
-        <article class="temoin" data-photo="images/salle-sous-les-arbres.jpg"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><blockquote>Ce domaine est un cadre idéal pour un séjour détente et découverte de la région, ou de réception festive (mariage familial dans mon cas ...)</blockquote><footer>Ethan N., sur Google</footer></article>
+        <article class="temoin" data-photo="images/mariage-tm13.jpg"><p class="temoin__titre">Magnifique domaine de la Drôme</p><blockquote>Nous avons louer ce domaine pour notre mariage tout début octobre. Les propriétaires sont droit dans leur bottes et très agréables ! Ils ont à coeur d'améliorer leur magnifique domaine pour proposer encore plus de couchage. Nous sommes très heureux d'avoir accueilli nos proches aux Chabriers !</blockquote><footer>Avis sur Mariages.net</footer></article>
+        <article class="temoin" data-photo="images/parc-cocktail.jpg"><p class="temoin__titre">Un lieu exceptionnel</p><blockquote>On ne pouvait pas rêver mieux pour fêter notre mariage ! Un lieu magnifiquement renové par Céline et Yves, qui sont très accueillants et disponibles. Le temps radieux du 25/04 nous a permis de profiter pleinement des extérieurs : espace vin d'honneur, photos de couple dans le parc, terrasse du gîte... On recommande fortement le domaine des Chabriers ! Un énorme merci !</blockquote><footer>Milène et Sébastien, sur Mariages.net</footer></article>
+        <article class="temoin" data-photo="images/salle-sous-les-arbres.jpg"><p class="temoin__titre">Un lieu de réception d'exception</p><blockquote>Ce domaine est un cadre idéal pour un séjour détente et découverte de la région, ou de réception festive (mariage familial dans mon cas ...). Un parc superbe agrémenté d'une belle piscine, et doté d'une très belle salle de réception avec une superbe vue sur les contreforts du Vercors. […] Les hôtes se montrent particulièrement attentifs, accueillants et disponibles. A ne pas manquer !</blockquote><footer>Avis sur Mariages.net</footer></article>
+        <article class="temoin" data-photo="images/parc-diner.jpg"><p class="temoin__titre">Un domaine magnifique</p><blockquote>Le domaine des Chabriers est un lieu magnifique. Il comporte plusieurs espaces (jardin, cour, salle de réception, gîte) permettant d'organiser les différents temps du mariage. Le paysage naturel est très beau et suffit comme décors. Céline est très accueillante. Tout est disponible sur place. Nous gardons un excellent souvenir et nos invités ont été ravis de passer une journée avec nous au domaine des Chabriers. Un grand merci !</blockquote><footer>Lorraine et Théo, sur Mariages.net</footer></article>
       </div>
       <div class="temoins__nav">
         <button class="fleche" type="button" data-temoin-g aria-label="Avis précédent">←</button>
         <button class="fleche" type="button" data-temoin-d aria-label="Avis suivant">→</button>
-        <span class="temoins__compte">1 / 3</span>
+        <span class="temoins__compte">1 / 4</span>
       </div>
     </div>
   </div>
@@ -242,7 +329,7 @@
         <h3>Le domaine</h3>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="gite.html">Le gîte</a></li>
+          <li><a href="gite.html">Les gîtes</a></li>
           <li><a href="receptions.html">Mariages et réceptions</a></li>
           <li><a href="stages.html">Stages</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -253,7 +340,7 @@
         <ul>
           <li><a href="tel:+33475400065">04 75 40 00 65</a></li>
           <li><a href="tel:+33628239021">06 28 23 90 21</a></li>
-          <li><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></li>
+          <li><a href="mailto:domainedeschabriers@gmail.com">domainedeschabriers@gmail.com</a></li>
           <li><a href="http://www.facebook.com/domainedeschabriers" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
@@ -273,5 +360,7 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/disponibilites.js"></script>
+<script src="js/calendrier.js"></script>
 </body>
 </html>

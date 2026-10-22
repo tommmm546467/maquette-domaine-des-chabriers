@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Le gîte · Domaine des Chabriers</title>
-<meta name="description" content="Gîte meublé 3 étoiles de 6 chambres, chacune avec sa salle d’eau, piscine et parc de 3 hectares, à Ourches dans la Drôme. Tarifs et calculateur du prix par personne.">
+<title>Les gîtes · Domaine des Chabriers</title>
+<meta name="description" content="Les gîtes du Domaine des Chabriers à Ourches (Drôme) : le château pour 14 personnes, la ferme dès avril 2027, piscine et parc de 3 hectares.">
 <meta name="theme-color" content="#4A2A45">
 <link rel="icon" href="images/logo-fonce.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,134 +24,70 @@
     <nav aria-label="Menu principal">
       <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="gite.html" aria-current="page">Le gîte</a></li>
+        <li class="menu__gites"><a href="gite.html" aria-current="true">Les gîtes<svg class="menu__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="sous-menu"><a href="gite.html" aria-current="page"><img src="images/vue-domaine-plongee.jpg" alt="" loading="lazy"><span>Tous les gîtes<small>Pour votre groupe</small></span></a><a href="gite-chateau.html"><img src="images/chateau-facade.jpg" alt="" loading="lazy"><span>Gîte A · Le château<small>14 personnes · 6 chambres</small></span></a><a href="gite-ferme.html"><img src="images/ferme-1.jpg" alt="" loading="lazy"><span>Gîte C · La ferme<small>Ouverture en avril 2027</small></span></a><a href="tarifs.html"><img src="images/piscine.jpg" alt="" loading="lazy"><span>Voir les tarifs<small>Le château et la ferme</small></span></a></div></li>
         <li><a href="receptions.html">Mariages et réceptions</a></li>
         <li><a href="stages.html">Stages</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <a class="bouton entete__appel" href="contact.html#demande">Demander une date</a>
+    <a class="bouton entete__appel" href="contact.html#demande" data-calendrier>Calendrier</a>
     <button class="entete__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
   </div>
 </div>
 <div id="contenu"></div>
 <main>
 <header class="heros heros--court heros--centre">
-  <div class="heros__photo"><img src="images/jardin-ouest.jpg" alt="Le salon de jardin à l’ouest de la maison, sous les arbres" fetchpriority="high"></div>
+  <div class="heros__photo"><img src="images/vue-domaine-plongee.jpg" alt="Le domaine vu du ciel : le château, la tour et le parc" fetchpriority="high"></div>
   <div class="heros__contenu">
     <a class="note-heros" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span class="etoiles" aria-hidden="true">★★★★★</span><strong>4,7</strong><span>sur Google · 24 avis</span></a>
-    <h1>Tout le gîte <em>pour votre groupe</em></h1>
-    <p class="heros__sous">6 chambres avec salle d’eau, une grande cuisine, une piscine et 3 hectares de parc. De la place pour chacun, des moments pour tous.</p>
+    <h1>Tous les gîtes <em>pour votre groupe</em></h1>
+    <p class="heros__sous">Le château accueille 14 personnes. La ferme ouvre en avril 2027, avec un gîte de groupe, un studio et 2 appartements.</p>
     <div class="boutons">
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
-      <a class="bouton bouton--clair" href="#tarifs">Voir les tarifs</a>
+      <a class="bouton" href="tarifs.html">Voir les tarifs</a>
+      <a class="bouton bouton--clair" href="contact.html?projet=gite#demande">Demander mes dates</a>
     </div>
   </div>
 </header>
 
-<section class="section" id="chambres">
-  <div class="envelop" data-rail>
-    <div class="tete-section apparait">
-      <p class="sur-titre">Les chambres</p>
-      <h2>Six chambres, <em>six ambiances</em></h2>
-      <p class="chapeau">12 personnes en 6 chambres de 2. Chaque chambre a sa salle d’eau ou son coin douche : fini l’attente devant la salle de bain le matin.</p>
-    </div>
-    <div class="rail__fleches"><button class="fleche" type="button" data-rail-g aria-label="Chambres précédentes">←</button><button class="fleche" type="button" data-rail-d aria-label="Chambres suivantes">→</button></div>
-    <div class="chambres rail">
-      <button class="chambre apparait" type="button" data-fiche="chambre-nature"><img src="images/nature-1.jpg" alt="La chambre Nature et son papier peint de feuillages" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Nature</em></span><span class="chambre__detail">2 adultes et 1 enfant</span></span></button>
-      <button class="chambre apparait apparait--2" type="button" data-fiche="chambre-crepuscule"><img src="images/crepuscule-2.jpg" alt="La chambre Crépuscule" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Crépuscule</em></span><span class="chambre__detail">2 adultes</span></span></button>
-      <button class="chambre apparait apparait--3" type="button" data-fiche="chambre-coquelicot"><img src="images/coquelicot-1.jpg" alt="La chambre Coquelicot aux murs rouges" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Coquelicot</em></span><span class="chambre__detail">2 adultes</span></span></button>
-      <button class="chambre apparait" type="button" data-fiche="chambre-luirre"><img src="images/luirre-1.jpg" alt="La chambre Luirre au matin" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Luirre</em></span><span class="chambre__detail">2 adultes</span></span></button>
-      <button class="chambre apparait apparait--2" type="button" data-fiche="chambre-aiguille"><img src="images/aiguille-1.jpg" alt="La chambre Aiguille et sa fresque de montagnes" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Aiguille</em></span><span class="chambre__detail">2 adultes</span></span></button>
-      <button class="chambre apparait apparait--3" type="button" data-fiche="chambre-drome"><img src="images/drome-1.jpg" alt="La chambre Drôme" loading="lazy"><span class="chambre__plus" aria-hidden="true">+</span><span class="chambre__texte"><span class="chambre__nom">Chambre <em>Drôme</em></span><span class="chambre__detail">2 adultes et 1 bébé</span></span></button>
-    </div>
-  </div>
-</section>
-
-<section class="section section--lin-fonce" id="vivre-ensemble">
-  <div class="envelop split">
-    <div class="apparait">
-      <p class="sur-titre">Les pièces communes</p>
-      <h2>De la place <em>pour se retrouver</em></h2>
-      <ul class="liste-fine">
-        <li>Un grand salon qui mêle l’ancien et le moderne.</li>
-        <li>Une grande cuisine avec cheminée, ouverte sur la terrasse sud.</li>
-        <li>Une grande table pour manger tous ensemble.</li>
-      </ul>
-      <ul class="citations">
-        <li><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><q>Magnifique domaine fraîchement rénové avec goût !</q><cite>Julie B., sur Google</cite></li>
-      </ul>
-    </div>
-    <div class="eventail apparait apparait--2">
-      <figure tabindex="0" role="button" aria-label="Agrandir : La cuisine et sa grande table"><img src="images/cuisine.jpg" alt="La cuisine et sa grande table" loading="lazy" data-agrandir><figcaption>La cuisine</figcaption></figure>
-      <figure tabindex="0" role="button" aria-label="Agrandir : La grande table du salon, sous les poutres"><img src="images/salon.jpg" alt="La grande table du salon, sous les poutres" loading="lazy" data-agrandir><figcaption>La salle à manger</figcaption></figure>
-      <figure tabindex="0" role="button" aria-label="Agrandir : La terrasse sud dressée"><img src="images/terrasse-sud.jpg" alt="La terrasse sud dressée" loading="lazy" data-agrandir><figcaption>La terrasse sud</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="dehors" id="dehors">
-  <div class="dehors__fond diaporama" data-diaporama>
-    <img class="est-visible" src="images/piscine-pool-house.jpg" alt="La piscine et ses transats" loading="lazy">
-    <img src="images/parc.jpg" alt="La grande pelouse du parc bordée d’arbres" loading="lazy">
-    <img src="images/coin-detente.jpg" alt="Le coin détente sous les arbres, côté ouest" loading="lazy">
-  </div>
-  <div class="envelop">
-    <div class="dehors__texte apparait">
-        <p class="sur-titre">L’extérieur</p>
-        <h2>Les journées <em>se passent dehors</em></h2>
-        <p>Une piscine avec transats, WC et douche chaude. Pétanque, tennis de table et trampoline pour les petits comme pour les grands. Et 3 hectares de parc au calme.</p>
-        <ul class="pastilles">
-          <li>Transats</li><li>Volet roulant</li><li>Douche chaude</li><li>Tennis de table</li><li>Pétanque</li><li>Trampoline</li>
-        </ul>
-      </div>
-  </div>
-</section>
-
-<section class="section section--lin-fonce" id="tarifs">
+<section class="section" id="nos-gites">
   <div class="envelop">
     <div class="tete-section apparait">
-      <p class="sur-titre">Tarifs</p>
-      <h2>Des prix clairs, <em>pour tout le gîte</em></h2>
-      <p class="chapeau">Ouvert de mai à fin octobre. Le prix est pour le gîte entier : partagé à 12, il devient très doux.</p>
+      <p class="sur-titre">Les gîtes</p>
+      <h2>Choisissez <em>votre gîte</em></h2>
     </div>
-    <div class="tarifs">
-      <table class="tableau-tarifs apparait">
-        <caption class="visuellement-cache">Tarifs de location du gîte entier</caption>
-        <tbody>
-          <tr><th scope="row">Semaine haute saison<small>7 nuits · soit environ <span data-calcul="3500/12/7">42 €</span> par personne et par nuit, à 12</small></th><td>3 500 €</td></tr>
-          <tr><th scope="row">Semaine moyenne saison<small>7 nuits · soit environ <span data-calcul="2500/12/7">30 €</span> par personne et par nuit, à 12</small></th><td>2 500 €</td></tr>
-          <tr><th scope="row">Semaine de la Toussaint<small>basse saison · soit environ <span data-calcul="2200/12/7">26 €</span> par personne et par nuit, à 12</small></th><td>2 200 €</td></tr>
-          <tr><th scope="row">2 nuits<small>jusqu’à 14 personnes · soit environ <span data-calcul="1500/14/2">54 €</span> par personne et par nuit, à 14</small></th><td>1 500 €</td></tr>
-        </tbody>
-      </table>
-      <div class="tarifs__infos apparait apparait--2">
-        <h3>Bon <em>à savoir</em></h3>
-        <ul class="liste-fine">
-          <li>L’été (vacances scolaires) : 7 jours minimum, arrivée le samedi.</li>
-          <li>Le week-end : en dehors des vacances scolaires.</li>
-          <li>Vous restez plus longtemps ? Demandez un tarif dégressif.</li>
-          <li>Paiement : chèque, chèques vacances, espèces, virement, monnaie locale, carte bancaire.</li>
-        </ul>
-        <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
-      </div>
+    <div class="portes apparait apparait--2">
+      <a class="porte" href="gite-chateau.html">
+        <img src="images/chateau-facade.jpg" alt="Le château, gîte A" loading="lazy">
+        <span class="porte__num">A</span><span class="porte__verbe">Séjourner</span>
+        <div class="porte__bas">
+          <h3>Le château</h3>
+          <p>14 personnes en 6 chambres, la grande cuisine, la cuisine d’été et la piscine.</p>
+          <span class="bouton">Voir le château</span>
+        </div>
+      </a>
+      <a class="porte" href="gite-ferme.html">
+        <img src="images/ferme-1.jpg" alt="La ferme, gîte C" loading="lazy">
+        <span class="porte__num">C</span><span class="porte__verbe">Dès 2027</span>
+        <div class="porte__bas">
+          <h3>La ferme</h3>
+          <p>Un gîte de groupe, un studio PMR et 2 appartements, à partir d’avril 2027.</p>
+          <span class="bouton">Voir la ferme</span>
+        </div>
+      </a>
+      <a class="porte" href="tarifs.html">
+        <img src="images/piscine.jpg" alt="La piscine devant la maison de maître" loading="lazy">
+        <span class="porte__num">€</span><span class="porte__verbe">Comparer</span>
+        <div class="porte__bas">
+          <h3>Les tarifs</h3>
+          <p>Le château et la ferme, saison par saison.</p>
+          <span class="bouton">Voir les tarifs</span>
+        </div>
+      </a>
     </div>
-  </div>
-</section>
-
-<section class="section" id="dortoir">
-  <div class="envelop">
-    <div class="encart apparait">
-      <div class="photo-a-prevoir">
-        <strong>Photo à prévoir</strong>
-        Le dortoir du grenier, lits faits, vu depuis l’entrée.
-      </div>
-      <div class="encart__texte">
-        <p class="sur-titre">Pour les grands groupes</p>
-        <div class="encart__chiffre">20</div>
-        <h3>couchages <em>au grenier</em></h3>
-        <p>Vous êtes plus nombreux ? Le dortoir du grenier accueille 20 personnes en plus du gîte. 15 couchages de plus arrivent en 2027.</p>
-      </div>
+    <div class="compris apparait apparait--3">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M3 18v2M21 18v2M6 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3M12 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg>
+      <p><strong>Compris dans votre séjour :</strong> chaque lit avec draps, taie d’oreiller, plaid ou couverture.</p>
     </div>
   </div>
 </section>
@@ -165,11 +101,13 @@
     </div>
     <div class="rail__fleches"><button class="fleche" type="button" data-rail-g aria-label="Précédent">←</button><button class="fleche" type="button" data-rail-d aria-label="Suivant">→</button></div>
     <div class="rail apparait apparait--2">
-      <article class="case"><img src="images/crest-baignade.jpg" alt="La Drôme et la tour de Crest au loin" loading="lazy"><div><span class="case__temps">15 min en voiture</span><h3>Crest</h3><p>La vieille ville et sa tour, à visiter en famille.</p></div></article>
-      <article class="case"><img src="images/alentours.jpg" alt="Les collines autour du domaine" loading="lazy"><div><span class="case__temps">Depuis le gîte</span><h3>Balades à pied et à vélo</h3><p>La Drôme des collines à 20 min, à pied ou à vélo.</p></div></article>
-      <article class="case"><img src="images/entree-chemin.jpg" alt="L’entrée du chemin du domaine, Ourches au loin" loading="lazy"><div><span class="case__temps">Tout près</span><h3>Vaunaveys et la Drôme</h3><p>Le village de Vaunaveys et les méandres de la Drôme.</p></div></article>
-      <article class="case"><img src="images/vue-hiver.jpg" alt="Les champs autour du domaine" loading="lazy"><div><span class="case__temps">Aux alentours</span><h3>La campagne</h3><p>Des cultures bio tout autour du domaine.</p></div></article>
-      <article class="case case--texte"><div><span class="case__temps">30 min en voiture</span><h3>Valence</h3><p>À 20 km, pour une journée en ville.</p></div></article>
+      <article class="case"><img src="images/autour-crest.jpg" alt="Les ruelles de Crest et leur clocher" loading="lazy"><div><span class="case__temps">15 min en voiture</span><h3>Crest</h3><p>La vieille ville et sa tour, à visiter en famille.</p></div></article>
+      <article class="case"><div class="case__photos diaporama" data-diaporama><img class="est-visible" src="images/autour-velo.jpg" alt="Le village de Saoû, une sortie à vélo" loading="lazy"><img src="images/autour-balades.jpg" alt="Une balade jusqu’à une cascade, au départ du gîte" loading="lazy"></div><div><span class="case__temps">Depuis le gîte</span><h3>Balades à pied et à vélo</h3><p>La Drôme des collines, la Drôme provençale.</p></div></article>
+      <article class="case"><div class="case__photos diaporama" data-diaporama><img class="est-visible" src="images/autour-cascade-ombleze.jpg" alt="La cascade d’Omblèze" loading="lazy"><img src="images/autour-vercors.jpg" alt="Les falaises du Vercors au-dessus des collines" loading="lazy"><img src="images/autour-cascade-druise.jpg" alt="Baignade au pied de la cascade de la Druise" loading="lazy"></div><div><span class="case__temps">À la journée</span><h3>Les incontournables</h3><p>Le Vercors et ses cascades.</p></div></article>
+      <article class="case"><div class="case__photos diaporama" data-diaporama><img class="est-visible" src="images/autour-drome-crest.jpg" alt="La Drôme et la tour de Crest" loading="lazy"><img src="images/autour-drome-riviere.jpg" alt="Une plage de galets au bord de la Drôme" loading="lazy"></div><div><span class="case__temps">L’été</span><h3>La Drôme en canoë</h3><p>La Drôme et ses méandres, en canoë et en kayak.</p></div></article>
+      <article class="case"><img src="images/entree-chemin.jpg" alt="L’entrée du chemin du domaine, Ourches au loin" loading="lazy"><div><span class="case__temps">Tout près</span><h3>Vaunaveys</h3><p>Le village de Vaunaveys, à deux pas du domaine.</p></div></article>
+      <article class="case"><img src="images/autour-a-pied.jpg" alt="Les champs vus à pied depuis le gîte des Chabriers" loading="lazy"><div><span class="case__temps">Aux alentours</span><h3>La campagne</h3><p>Des cultures bio tout autour du domaine.</p></div></article>
+      <article class="case"><img src="images/autour-valence.jpg" alt="Le kiosque Peynet à Valence" loading="lazy"><div><span class="case__temps">30 min en voiture</span><h3>Valence</h3><p>À 20 km, pour une journée en ville.</p></div></article>
     </div>
   </div>
 </section>
@@ -182,92 +120,6 @@
     <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
   </div>
 </section>
-
-<dialog class="fiche" id="chambre-nature" aria-labelledby="t-nature">
-  <button class="fiche__fermer" type="button" aria-label="Fermer">×</button>
-  <div class="fiche__boite">
-    <div class="fiche__photos">
-      <img src="images/nature-1.jpg" alt="La chambre Nature" loading="lazy" data-agrandir><img src="images/nature-2.jpg" alt="La chambre Nature, lits et fenêtre" loading="lazy" data-agrandir><img src="images/nature-3.jpg" alt="Le coin table de la chambre Nature" loading="lazy" data-agrandir><img src="images/nature-4.jpg" alt="La salle d’eau de la chambre Nature" loading="lazy" data-agrandir><img src="images/nature-5.jpg" alt="La douche de la chambre Nature" loading="lazy" data-agrandir>
-    </div>
-    <div class="fiche__texte">
-      <p class="sur-titre">Le gîte</p>
-      <h2 id="t-nature">Chambre <em>Nature</em></h2>
-      <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes et 1 enfant</strong></li><li><span>Lits</span><strong>2 lits simples, un lit de 80 × 190 cm en option et un lit bébé</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
-    </div>
-  </div>
-</dialog>
-<dialog class="fiche" id="chambre-crepuscule" aria-labelledby="t-crepuscule">
-  <button class="fiche__fermer" type="button" aria-label="Fermer">×</button>
-  <div class="fiche__boite">
-    <div class="fiche__photos">
-      <img src="images/crepuscule-2.jpg" alt="La chambre Crépuscule" loading="lazy" data-agrandir><img src="images/crepuscule-1.jpg" alt="La chambre Crépuscule et son coin salon" loading="lazy" data-agrandir><img src="images/crepuscule-3.jpg" alt="Les lits de la chambre Crépuscule" loading="lazy" data-agrandir>
-    </div>
-    <div class="fiche__texte">
-      <p class="sur-titre">Le gîte</p>
-      <h2 id="t-crepuscule">Chambre <em>Crépuscule</em></h2>
-      <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes</strong></li><li><span>Lits</span><strong>2 lits simples 140 cm</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
-    </div>
-  </div>
-</dialog>
-<dialog class="fiche" id="chambre-coquelicot" aria-labelledby="t-coquelicot">
-  <button class="fiche__fermer" type="button" aria-label="Fermer">×</button>
-  <div class="fiche__boite">
-    <div class="fiche__photos">
-      <img src="images/coquelicot-1.jpg" alt="La chambre Coquelicot" loading="lazy" data-agrandir><img src="images/coquelicot-2.jpg" alt="Les têtes de lit de la chambre Coquelicot" loading="lazy" data-agrandir><img src="images/coquelicot-3.jpg" alt="La douche et la cheminée de la chambre Coquelicot" loading="lazy" data-agrandir><img src="images/coquelicot-4.jpg" alt="Le coin douche de la chambre Coquelicot" loading="lazy" data-agrandir><img src="images/coquelicot-5.jpg" alt="Le lavabo de la chambre Coquelicot" loading="lazy" data-agrandir>
-    </div>
-    <div class="fiche__texte">
-      <p class="sur-titre">Le gîte</p>
-      <h2 id="t-coquelicot">Chambre <em>Coquelicot</em></h2>
-      <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes</strong></li><li><span>Lits</span><strong>2 lits simples 140 cm</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
-    </div>
-  </div>
-</dialog>
-<dialog class="fiche" id="chambre-luirre" aria-labelledby="t-luirre">
-  <button class="fiche__fermer" type="button" aria-label="Fermer">×</button>
-  <div class="fiche__boite">
-    <div class="fiche__photos">
-      <img src="images/luirre-1.jpg" alt="La chambre Luirre au matin" loading="lazy" data-agrandir><img src="images/luirre-2.jpg" alt="La chambre Luirre" loading="lazy" data-agrandir><img src="images/luirre-3.jpg" alt="La chambre Luirre et sa douche" loading="lazy" data-agrandir><img src="images/luirre-4.jpg" alt="La cheminée de la chambre Luirre" loading="lazy" data-agrandir>
-    </div>
-    <div class="fiche__texte">
-      <p class="sur-titre">Le gîte</p>
-      <h2 id="t-luirre">Chambre <em>Luirre</em></h2>
-      <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes</strong></li><li><span>Lits</span><strong>2 lits simples 140 cm</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
-    </div>
-  </div>
-</dialog>
-<dialog class="fiche" id="chambre-aiguille" aria-labelledby="t-aiguille">
-  <button class="fiche__fermer" type="button" aria-label="Fermer">×</button>
-  <div class="fiche__boite">
-    <div class="fiche__photos">
-      <img src="images/aiguille-1.jpg" alt="La chambre Aiguille" loading="lazy" data-agrandir><img src="images/aiguille-2.jpg" alt="La fresque de la chambre Aiguille" loading="lazy" data-agrandir>
-    </div>
-    <div class="fiche__texte">
-      <p class="sur-titre">Le gîte</p>
-      <h2 id="t-aiguille">Chambre <em>Aiguille</em></h2>
-      <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes</strong></li><li><span>Lits</span><strong>2 lits simples</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
-    </div>
-  </div>
-</dialog>
-<dialog class="fiche" id="chambre-drome" aria-labelledby="t-drome">
-  <button class="fiche__fermer" type="button" aria-label="Fermer">×</button>
-  <div class="fiche__boite">
-    <div class="fiche__photos">
-      <img src="images/drome-1.jpg" alt="La chambre Drôme" loading="lazy" data-agrandir><img src="images/drome-2.jpg" alt="La chambre Drôme et sa cheminée" loading="lazy" data-agrandir><img src="images/drome-3.jpg" alt="La fresque de rivière de la chambre Drôme" loading="lazy" data-agrandir><img src="images/drome-4.jpg" alt="La salle d’eau de la chambre Drôme" loading="lazy" data-agrandir>
-    </div>
-    <div class="fiche__texte">
-      <p class="sur-titre">Le gîte</p>
-      <h2 id="t-drome">Chambre <em>Drôme</em></h2>
-      <ul class="fiche__infos"><li><span>Capacité</span><strong>2 adultes et 1 bébé</strong></li><li><span>Lits</span><strong>2 lits simples 140 cm et un lit bébé pliant</strong></li></ul>
-      <a class="bouton" href="contact.html?projet=gite#demande">Demander mes dates</a>
-    </div>
-  </div>
-</dialog>
-
 </main>
 <footer class="pied">
   <div class="envelop">
@@ -280,7 +132,7 @@
         <h3>Le domaine</h3>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="gite.html">Le gîte</a></li>
+          <li><a href="gite.html">Les gîtes</a></li>
           <li><a href="receptions.html">Mariages et réceptions</a></li>
           <li><a href="stages.html">Stages</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -291,7 +143,7 @@
         <ul>
           <li><a href="tel:+33475400065">04 75 40 00 65</a></li>
           <li><a href="tel:+33628239021">06 28 23 90 21</a></li>
-          <li><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></li>
+          <li><a href="mailto:domainedeschabriers@gmail.com">domainedeschabriers@gmail.com</a></li>
           <li><a href="http://www.facebook.com/domainedeschabriers" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
@@ -311,5 +163,7 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/disponibilites.js"></script>
+<script src="js/calendrier.js"></script>
 </body>
 </html>

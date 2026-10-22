@@ -5,28 +5,15 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Domaine des Chabriers · Gîte, réceptions et stages dans la Drôme</title>
-<meta name="description" content="Maison de maître de plus de 600 ans à Ourches, sur les contreforts du Vercors : gîte de 6 chambres avec piscine, salle de réception de plus de 300 m² et stages yoga et pilates.">
+<meta name="description" content="Maison de maître de plus de 600 ans à Ourches, sur les contreforts du Vercors : 2 gîtes avec piscine, salle de réception de plus de 300 m² et stages divers.">
 <meta name="theme-color" content="#4A2A45">
 <link rel="icon" href="images/logo-fonce.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script>
-/* Écran d'entrée (V2) : affiché à l'ouverture du site (nouvel onglet, nouvelle visite) et quand on recharge la page,
-   pas quand on revient sur l'accueil depuis une autre page du site. Décidé ici, avant le premier affichage. */
-(function () { var r = document.documentElement; r.classList.add('js');
-  try { var n = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
-    var recharge = n && n.type === 'reload';
-    if (sessionStorage.getItem('chabriers-entree-vue') && !recharge) r.classList.add('sans-entree');
-    sessionStorage.setItem('chabriers-entree-vue', '1'); } catch (e) {} })();
-</script>
 </head>
 <body>
-<div class="entree" id="entree" aria-hidden="true">
-  <img class="entree__photo" src="images/vue-ete.jpg" alt="" width="1600" height="1200" fetchpriority="high">
-  <div class="entree__logo"><img src="images/logo-clair.png" alt="" width="700" height="203"></div>
-</div>
 <a class="visuellement-cache" href="#contenu">Aller au contenu</a>
 <div class="entete">
   <div class="entete__envelop">
@@ -37,13 +24,14 @@
     <nav aria-label="Menu principal">
       <ul class="menu">
         <li><a href="index.html" aria-current="page">Accueil</a></li>
-        <li><a href="gite.html">Le gîte</a></li>
+        <li class="menu__gites"><a href="gite.html">Les gîtes<svg class="menu__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="sous-menu"><a href="gite.html"><img src="images/vue-domaine-plongee.jpg" alt="" loading="lazy"><span>Tous les gîtes<small>Pour votre groupe</small></span></a><a href="gite-chateau.html"><img src="images/chateau-facade.jpg" alt="" loading="lazy"><span>Gîte A · Le château<small>14 personnes · 6 chambres</small></span></a><a href="gite-ferme.html"><img src="images/ferme-1.jpg" alt="" loading="lazy"><span>Gîte C · La ferme<small>Ouverture en avril 2027</small></span></a><a href="tarifs.html"><img src="images/piscine.jpg" alt="" loading="lazy"><span>Voir les tarifs<small>Le château et la ferme</small></span></a></div></li>
         <li><a href="receptions.html">Mariages et réceptions</a></li>
         <li><a href="stages.html">Stages</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <a class="bouton entete__appel" href="contact.html#demande">Demander une date</a>
+    <a class="bouton entete__appel" href="contact.html#demande" data-calendrier>Calendrier</a>
     <button class="entete__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
   </div>
 </div>
@@ -72,7 +60,7 @@
     <li><span class="bande-mots__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 17c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 21c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 14V5a2 2 0 0 1 4 0M16 14V5a2 2 0 0 0-4 0M8 9h8"/></svg></span><span><strong>Piscine</strong>avec transats</span></li>
     <li><span class="bande-mots__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-7M12 14c-4 0-6-2.5-6-5.5S8.5 3 12 3s6 2.5 6 5.5S16 14 12 14zM8 21h8"/></svg></span><span><strong>Parc de 3 hectares</strong>au calme</span></li>
     <li><span class="bande-mots__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span><span><strong>Salle de réception</strong>plus de 300 m²</span></li>
-    <li><span class="bande-mots__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M3 18v2M21 18v2M6 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3M12 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg></span><span><strong>6 chambres</strong>chacune sa salle d’eau</span></li>
+    <li><span class="bande-mots__icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M3 18v2M21 18v2M6 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3M12 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg></span><span><strong>2 gîtes</strong>45 places</span></li>
   </ul>
 </div>
 
@@ -87,9 +75,9 @@
         <img src="images/piscine.jpg" alt="La piscine devant la maison de maître" loading="lazy">
         <span class="porte__num">01</span><span class="porte__verbe">Séjourner</span>
         <div class="porte__bas">
-          <h3>Le gîte</h3>
-          <p>Tout le gîte pour votre groupe : 6 chambres avec salle d’eau, une piscine et 3 hectares de parc.</p>
-          <span class="bouton">Voir le gîte</span>
+          <h3>Les gîtes</h3>
+          <p>Le château pour 14 personnes et bientôt la ferme, avec une piscine et 3 hectares de parc.</p>
+          <span class="bouton">Voir les gîtes</span>
         </div>
       </a>
       <a class="porte" href="receptions.html">
@@ -105,8 +93,8 @@
         <img src="images/yoga-cedre.jpg" alt="Séance de yoga sous le grand cèdre du parc" loading="lazy">
         <span class="porte__num">03</span><span class="porte__verbe">Se ressourcer</span>
         <div class="porte__bas">
-          <h3>Stages yoga et pilates</h3>
-          <p>Du yoga et du pilates au calme, sous les grands arbres du parc.</p>
+          <h3>Stages divers</h3>
+          <p>Des stages au calme, sous les grands arbres du parc.</p>
           <span class="bouton">Voir les stages</span>
         </div>
       </a>
@@ -119,12 +107,12 @@
     <div class="apparait">
       <p class="sur-titre">Son histoire</p>
       <h2>Plus de 600 ans <em>de caractère</em></h2>
-      <p class="chapeau">Ici, vous ne louez pas une simple maison : vous séjournez dans une ancienne ferme du 15ᵉ siècle, restaurée avec soin.</p>
+      <p class="chapeau">Ici, vous séjournez dans une ancienne ferme du 15ᵉ siècle, restaurée avec soin.</p>
       <ol class="frise">
-        <li><span class="frise__date">15ᵉ siècle</span><p>Une propriété agricole voit le jour. Son nom, « Les Chabriers », veut dire « les éleveurs de chèvres ».</p></li>
-        <li><span class="frise__date">«  Le château  »</span><p>La maison de maître a tant de caractère qu’on la surnomme le château. Vous comprendrez pourquoi en arrivant.</p></li>
-        <li><span class="frise__date">La rénovation</span><p>Céline et Yves la transforment en gîte et en chambres d’hôtes, en gardant son âme et ses vieilles pierres.</p></li>
-        <li><span class="frise__date">Aujourd’hui</span><p>Elle vous ouvre ses portes, avec son parc de 3 hectares, sa piscine et sa salle de réception.</p></li>
+        <li><span class="frise__date">1790</span><p>L. P. M. Enemond, juge de paix à Chabeuil, rachète le domaine. Lui et sa descendance le transforment en maison de maître et de villégiature.</p></li>
+        <li><span class="frise__date">1830</span><p>F. de Lambert, son descendant, aménage le parc avec son allée de platanes et sa pièce d’eau. Il possède 30 hectares de terres agricoles. Maire d’Ourches, il développe au domaine une magnanerie et une distillerie communale. Le grand bassin à rouir sert à tous les villageois pour attendrir le chanvre.</p></li>
+        <li><span class="frise__date">1930</span><p>Léon Faure rachète le domaine et lui succède à la mairie. Le château abrite alors des résistants : le maquis est présent dans le village.</p></li>
+        <li><span class="frise__date">1945</span><p>Le hangar agricole, l’actuelle salle de réception, est bombardé. Après la guerre, l’agriculture intensive voit le jour avec un nouveau poulailler de plus de 2 000 poules !</p></li>
       </ol>
     </div>
     <div class="superposees apparait apparait--2">
@@ -140,24 +128,22 @@
     <div class="tete-section apparait">
       <p class="sur-titre">Le plan</p>
       <h2>Le domaine <em>en un coup d’œil</em></h2>
-      <p class="chapeau">Choisissez une lettre : vous voyez tout de suite ce qui est à vous pendant votre séjour.</p>
+      <p class="chapeau">Quatre bâtiments, quatre lettres : voici ce que chacun abrite.</p>
     </div>
-    <div class="plan apparait apparait--2">
+    <div class="plan plan--blocs apparait apparait--2">
       <div class="plan__carte">
-        <img src="images/plan-domaine.jpg" alt="Vue aérienne du domaine des Chabriers et de son parc" loading="lazy">
-        <button class="point" type="button" style="left:34.7%;top:64%" aria-pressed="true" data-titre="Le gîte" data-texte="Le bâtiment que vous louez et tout le parc." data-photo="images/vue-ete.jpg" data-alt="La maison de maître vue du parc">A</button>
-        <button class="point" type="button" style="left:42.9%;top:64%" aria-pressed="false" data-prive data-titre="Les propriétaires" data-texte="Céline et Yves vivent ici : disponibles quand vous avez besoin d’eux, discrets le reste du temps." data-photo="images/cour-tour.jpg" data-alt="La cour et la tour">B</button>
-        <button class="point" type="button" style="left:52.9%;top:62.1%" aria-pressed="false" data-prive data-titre="Le gîte en rénovation" data-texte="Un bâtiment en travaux, fermé et inhabité." data-photo="images/vue-hiver.jpg" data-alt="Le domaine vu du chemin, en hiver">C</button>
-        <button class="point" type="button" style="left:56.7%;top:88.5%" aria-pressed="false" data-titre="La salle de réception" data-texte="Plus de 300 m² couverts, avec 50 m² de cuisine et de sanitaires." data-photo="images/salle-sous-les-arbres.jpg" data-alt="La salle de réception sous les arbres du parc">D</button>
+        <img src="images/plan-domaine.jpg" alt="Vue aérienne du domaine des Chabriers et de son parc, avec les lettres des quatre bâtiments" loading="lazy">
+        <span class="point" style="left:34.7%;top:64%" data-bloc="A" aria-hidden="true">A</span>
+        <span class="point" style="left:42.9%;top:64%" data-bloc="B" aria-hidden="true">B</span>
+        <span class="point" style="left:52.9%;top:62.1%" data-bloc="C" aria-hidden="true">C</span>
+        <span class="point" style="left:56.7%;top:88.5%" data-bloc="D" aria-hidden="true">D</span>
       </div>
-      <div class="plan__fiche">
-        <img src="images/vue-ete.jpg" alt="La maison de maître vue du parc" loading="lazy">
-        <div>
-          <span class="plan__lettre">Bâtiment A</span>
-          <h3>Le gîte</h3>
-          <p>Le bâtiment que vous louez et tout le parc.</p>
-        </div>
-      </div>
+      <ul class="plan__blocs">
+        <li><a class="bloc" href="gite-chateau.html" data-bloc="A"><img src="images/chateau-facade.jpg" alt="Le château, gîte A, et sa terrasse" loading="lazy"><span class="bloc__lettre">A</span><span class="bloc__texte"><strong>Le château</strong><small>Vous louez tout l’étage 1 avec sa terrasse · accès au parc</small><span class="bloc__lien">Voir le gîte A</span></span></a></li>
+        <li><div class="bloc" data-bloc="B" tabindex="0"><img src="images/veranda.jpg" alt="La véranda, maison des propriétaires" loading="lazy"><span class="bloc__lettre">B</span><span class="bloc__texte"><strong>La véranda</strong><small>Maison des propriétaires · accueil de la clientèle</small></span></div></li>
+        <li><a class="bloc" href="gite-ferme.html" data-bloc="C"><img src="images/ferme-1.jpg" alt="La ferme, gîte C, en cours de rénovation" loading="lazy"><span class="bloc__lettre">C</span><span class="bloc__texte"><strong>La ferme</strong><small>Gîte de groupe au rez-de-chaussée, studio PMR, 2 appartements à l’étage</small><span class="bloc__lien">Voir le gîte C</span></span></a></li>
+        <li><a class="bloc" href="receptions.html" data-bloc="D"><img src="images/salle-sous-les-arbres.jpg" alt="La salle de réception sous les arbres du parc" loading="lazy"><span class="bloc__lettre">D</span><span class="bloc__texte"><strong>La salle de réception</strong><small>Mariages et événements variés</small><span class="bloc__lien">Voir la salle</span></span></a></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -244,7 +230,7 @@
         <h3>Le domaine</h3>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="gite.html">Le gîte</a></li>
+          <li><a href="gite.html">Les gîtes</a></li>
           <li><a href="receptions.html">Mariages et réceptions</a></li>
           <li><a href="stages.html">Stages</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -255,7 +241,7 @@
         <ul>
           <li><a href="tel:+33475400065">04 75 40 00 65</a></li>
           <li><a href="tel:+33628239021">06 28 23 90 21</a></li>
-          <li><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></li>
+          <li><a href="mailto:domainedeschabriers@gmail.com">domainedeschabriers@gmail.com</a></li>
           <li><a href="http://www.facebook.com/domainedeschabriers" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
@@ -275,5 +261,7 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/disponibilites.js"></script>
+<script src="js/calendrier.js"></script>
 </body>
 </html>

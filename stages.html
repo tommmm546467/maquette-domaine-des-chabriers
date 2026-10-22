@@ -24,13 +24,14 @@
     <nav aria-label="Menu principal">
       <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="gite.html">Le gîte</a></li>
+        <li class="menu__gites"><a href="gite.html">Les gîtes<svg class="menu__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="sous-menu"><a href="gite.html"><img src="images/vue-domaine-plongee.jpg" alt="" loading="lazy"><span>Tous les gîtes<small>Pour votre groupe</small></span></a><a href="gite-chateau.html"><img src="images/chateau-facade.jpg" alt="" loading="lazy"><span>Gîte A · Le château<small>14 personnes · 6 chambres</small></span></a><a href="gite-ferme.html"><img src="images/ferme-1.jpg" alt="" loading="lazy"><span>Gîte C · La ferme<small>Ouverture en avril 2027</small></span></a><a href="tarifs.html"><img src="images/piscine.jpg" alt="" loading="lazy"><span>Voir les tarifs<small>Le château et la ferme</small></span></a></div></li>
         <li><a href="receptions.html">Mariages et réceptions</a></li>
         <li><a href="stages.html" aria-current="page">Stages</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <a class="bouton entete__appel" href="contact.html#demande">Demander une date</a>
+    <a class="bouton entete__appel" href="contact.html#demande" data-calendrier>Calendrier</a>
     <button class="entete__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
   </div>
 </div>
@@ -41,7 +42,7 @@
   <div class="heros__contenu">
     <a class="note-heros" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span class="etoiles" aria-hidden="true">★★★★★</span><strong>4,7</strong><span>sur Google · 24 avis</span></a>
     <h1>Prenez du temps <em>pour vous</em></h1>
-    <p class="heros__sous">Yoga et pilates au calme d’un parc de 3 hectares : une vraie parenthèse pour le corps et la tête.</p>
+    <p class="heros__sous">Yoga et pilates au calme dans un parc : une vraie parenthèse pour le corps et la tête.</p>
     <div class="boutons">
       <a class="bouton" href="#agenda">Voir l’agenda</a>
       <a class="bouton bouton--clair" href="#organiser">Organiser un stage ici</a>
@@ -92,7 +93,7 @@
         </div>
       </div>
       <div class="porte" tabindex="0">
-        <img src="images/cedre.jpg" alt="Le grand cèdre du parc" loading="lazy">
+        <img src="images/stages-yoga-cedre.jpg" alt="Une séance de yoga à l’ombre du grand cèdre" loading="lazy">
         <span class="porte__num">03</span><span class="porte__verbe">Dehors</span>
         <div class="porte__bas">
           <h3>Sous le cèdre</h3>
@@ -113,8 +114,8 @@
         <li>Une salle de plus de 300 m², modulable</li>
         <li>Un parc de 3 hectares au calme</li>
         <li>Une piscine extérieure</li>
-        <li>Le gîte : 6 chambres avec salle d’eau</li>
-        <li>Un dortoir de 20 couchages au grenier</li>
+        <li>Le(s) gîte(s) : le château, 6 chambres avec salle de bain et WC ; la ferme, 3 appartements et un gîte de groupe (dès 2027)</li>
+        <li>Un dortoir de 15 couchages au grenier</li>
         <li>Une cuisine, un vidéoprojecteur et le wifi</li>
       </ul>
       <div class="boutons" style="margin-top:30px">
@@ -165,7 +166,7 @@
         <h3>Le domaine</h3>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="gite.html">Le gîte</a></li>
+          <li><a href="gite.html">Les gîtes</a></li>
           <li><a href="receptions.html">Mariages et réceptions</a></li>
           <li><a href="stages.html">Stages</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -176,7 +177,7 @@
         <ul>
           <li><a href="tel:+33475400065">04 75 40 00 65</a></li>
           <li><a href="tel:+33628239021">06 28 23 90 21</a></li>
-          <li><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></li>
+          <li><a href="mailto:domainedeschabriers@gmail.com">domainedeschabriers@gmail.com</a></li>
           <li><a href="http://www.facebook.com/domainedeschabriers" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
@@ -197,5 +198,7 @@
 </footer>
 <script src="js/stages.js"></script>
 <script src="js/main.js"></script>
+<script src="js/disponibilites.js"></script>
+<script src="js/calendrier.js"></script>
 </body>
 </html>

@@ -24,13 +24,14 @@
     <nav aria-label="Menu principal">
       <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="gite.html">Le gîte</a></li>
+        <li class="menu__gites"><a href="gite.html">Les gîtes<svg class="menu__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="sous-menu"><a href="gite.html"><img src="images/vue-domaine-plongee.jpg" alt="" loading="lazy"><span>Tous les gîtes<small>Pour votre groupe</small></span></a><a href="gite-chateau.html"><img src="images/chateau-facade.jpg" alt="" loading="lazy"><span>Gîte A · Le château<small>14 personnes · 6 chambres</small></span></a><a href="gite-ferme.html"><img src="images/ferme-1.jpg" alt="" loading="lazy"><span>Gîte C · La ferme<small>Ouverture en avril 2027</small></span></a><a href="tarifs.html"><img src="images/piscine.jpg" alt="" loading="lazy"><span>Voir les tarifs<small>Le château et la ferme</small></span></a></div></li>
         <li><a href="receptions.html">Mariages et réceptions</a></li>
         <li><a href="stages.html">Stages</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
-    <a class="bouton entete__appel" href="contact.html#demande">Demander une date</a>
+    <a class="bouton entete__appel" href="contact.html#demande" data-calendrier>Calendrier</a>
     <button class="entete__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
   </div>
 </div>
@@ -46,7 +47,7 @@
         <div class="ronds">
         <a class="rond" href="tel:+33475400065"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></span>04 75 40 00 65</a>
         <a class="rond" href="tel:+33628239021"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>06 28 23 90 21</a>
-        <a class="rond" href="mailto:contact@domainedeschabriers.com"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>Écrire</a>
+        <a class="rond" href="mailto:domainedeschabriers@gmail.com"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>Écrire</a>
         <a class="rond" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>Itinéraire</a>
       </div>
         <a class="badge-avis contact-avis" href="https://goo.gl/maps/2ARCWtvLBcjThidV8" target="_blank" rel="noopener"><span class="etoiles" aria-hidden="true">★★★★★</span><strong>4,7</strong> sur Google · 24 avis</a>
@@ -85,7 +86,7 @@
       <div class="formulaire__merci" hidden>
         <h2>Merci, <em>c’est presque prêt</em></h2>
         <p>Votre message est préparé dans votre messagerie : il ne reste qu’à l’envoyer.</p>
-        <a class="bouton" href="mailto:contact@domainedeschabriers.com">Ouvrir ma messagerie</a>
+        <a class="bouton" href="mailto:domainedeschabriers@gmail.com">Ouvrir ma messagerie</a>
       </div>
     </div>
   </div>
@@ -98,9 +99,9 @@
       <h2>Avant <em>de venir</em></h2>
     </div>
     <div class="bon-a-savoir">
-      <div class="apparait"><h3>Ouverture</h3><p>De mai à fin octobre, tous les jours.</p><p>Chambres d’hôtes en dehors de l’été.</p></div>
+      <div class="apparait"><h3>Ouverture</h3><p>D’avril à fin octobre, tous les jours.</p><p>Chambres d’hôtes en haute et en basse saison.</p></div>
       <div class="apparait apparait--2"><h3>Paiement</h3><p>Chèque, chèques vacances, espèces, virement, monnaie locale, carte bancaire.</p></div>
-      <div class="apparait apparait--3"><h3>Adresse</h3><p>470 route de la Salette<br>Les Chabriers<br>26120 Ourches</p><p><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></p></div>
+      <div class="apparait apparait--3"><h3>Adresse</h3><p>470 route de la Salette<br>Les Chabriers<br>26120 Ourches</p><p><a href="mailto:domainedeschabriers@gmail.com">domainedeschabriers@gmail.com</a></p></div>
     </div>
   </div>
 </section>
@@ -117,7 +118,7 @@
         <h3>Le domaine</h3>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="gite.html">Le gîte</a></li>
+          <li><a href="gite.html">Les gîtes</a></li>
           <li><a href="receptions.html">Mariages et réceptions</a></li>
           <li><a href="stages.html">Stages</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -128,7 +129,7 @@
         <ul>
           <li><a href="tel:+33475400065">04 75 40 00 65</a></li>
           <li><a href="tel:+33628239021">06 28 23 90 21</a></li>
-          <li><a href="mailto:contact@domainedeschabriers.com">contact@domainedeschabriers.com</a></li>
+          <li><a href="mailto:domainedeschabriers@gmail.com">domainedeschabriers@gmail.com</a></li>
           <li><a href="http://www.facebook.com/domainedeschabriers" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
@@ -148,5 +149,7 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/disponibilites.js"></script>
+<script src="js/calendrier.js"></script>
 </body>
 </html>
