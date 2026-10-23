@@ -20,5 +20,21 @@ window.STAGES = [
     debut: '2026-07-06', fin: '2026-07-10',
     texte: '5 days to strengthen your body in depth and free your creativity through earth and fire.',
     plaquette: 'http://www.domainedeschabriers.com/wp-content/uploads/2026/02/Yoga-pilates-raku-juillet-26-revu.pdf'
+  },
+  {
+    titre: 'Cleanse the body, find your breath',
+    theme: 'Iyengar yoga and active walking',
+    debut: '2027-05-06', fin: '2027-05-09',
+    texte: '4 days and 4 nights between the Drôme valley and the Vercors: Iyengar yoga in the morning, active walking in the afternoon. €480, all inclusive.',
+    page: 'stage-yoga-iyengar-marche-2027.html',
+    plaquette: 'documents/stage-yoga-iyengar-marche-mai-2027.pdf'
+  },
+  {
+    titre: 'Breathe, awaken your energy',
+    theme: 'Pilates and raku pottery or walks',
+    debut: '2027-07-05', fin: '2027-07-09',
+    texte: '5 days and 4 nights, full board: Pilates morning and evening, with a raku pottery workshop or walks as options. €670.',
+    page: 'stage-pilates-poterie-raku-2027.html',
+    plaquette: 'documents/stage-pilates-poterie-raku-juillet-2027.pdf'
   }
 ];

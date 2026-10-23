@@ -20,5 +20,21 @@ window.STAGES = [
     debut: '2026-07-06', fin: '2026-07-10',
     texte: '5 jours pour renforcer votre corps en profondeur et libérer votre créativité par la terre et le feu.',
     plaquette: 'http://www.domainedeschabriers.com/wp-content/uploads/2026/02/Yoga-pilates-raku-juillet-26-revu.pdf'
+  },
+  {
+    titre: 'Purifier le corps, retrouver son souffle',
+    theme: 'Yoga Iyengar et marche active',
+    debut: '2027-05-06', fin: '2027-05-09',
+    texte: '4 jours et 4 nuits entre la vallée de la Drôme et le Vercors : Yoga Iyengar le matin, marche active l’après-midi. 480 €, tout compris.',
+    page: 'stage-yoga-iyengar-marche-2027.html',
+    plaquette: 'documents/stage-yoga-iyengar-marche-mai-2027.pdf'
+  },
+  {
+    titre: 'Respirer, activer l’énergie',
+    theme: 'Pilates et poterie raku ou balades',
+    debut: '2027-07-05', fin: '2027-07-09',
+    texte: '5 jours et 4 nuits en pension complète : Pilates matin et soir, atelier de poterie raku ou balades en option. 670 €.',
+    page: 'stage-pilates-poterie-raku-2027.html',
+    plaquette: 'documents/stage-pilates-poterie-raku-juillet-2027.pdf'
   }
 ];

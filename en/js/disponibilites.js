@@ -10,6 +10,7 @@
    Pour chaque choix :
    - ouvreLe : première nuit possible (la ferme n'existe qu'à partir de son ouverture) ;
    - mois : mois d'ouverture dans l'année (1 = janvier), absent = ouvert toute l'année ;
+   - toutelAnneeDes : à partir de cette nuit, ouvert toute l'année malgré « mois » (Céline, confirmé le 24/10/2026 : toute l'année dès 2027) ;
    - minimum : nuits minimum (au château, 3 l'été : voir calendrier.js) ;
    - projet : le choix du formulaire de contact prérempli ;
    - reserve : séjours déjà pris, [arrivée, départ] (la nuit du départ reste libre). */
@@ -18,6 +19,7 @@ window.DISPONIBILITES = {
     nom: 'The whole estate',
     detail: 'Exclusive use · wedding, reception, large event',
     mois: [4, 5, 6, 7, 8, 9, 10],
+    toutelAnneeDes: '2027-01-01',
     minimum: 1,
     projet: 'mariage',
     reserve: [
@@ -34,6 +36,7 @@ window.DISPONIBILITES = {
     nom: 'Gîte A · The château',
     detail: '14 guests · 6 bedrooms',
     mois: [4, 5, 6, 7, 8, 9, 10],
+    toutelAnneeDes: '2027-01-01',
     minimum: 2,
     projet: 'gite',
     reserve: []

@@ -33,7 +33,7 @@
     var l = DISPOS[logement];
     if (k < aujourdhui) return 'passe';
     if (l.ouvreLe && k < l.ouvreLe) return 'ferme';
-    if (l.mois && l.mois.indexOf(date(k).getMonth() + 1) < 0) return 'ferme';
+    if (l.mois && !(l.toutelAnneeDes && k >= l.toutelAnneeDes) && l.mois.indexOf(date(k).getMonth() + 1) < 0) return 'ferme';
     var r = reservations(logement);
     for (var i = 0; i < r.length; i++) if (k >= r[i][0] && k < r[i][1]) return 'reserve';
     return 'libre';
