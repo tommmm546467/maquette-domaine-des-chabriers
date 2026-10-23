@@ -256,7 +256,6 @@
         '<div class="stage__date"><strong>' + d.getDate() + '</strong><span>au ' + f.getDate() + ' ' + mois[f.getMonth()] + '<br>' + f.getFullYear() + '</span></div>' +
         '<div class="stage__corps">' + (passe ? '<span class="etiquette">A eu lieu</span>' : '<span class="etiquette">' + s.theme + '</span>') +
         '<h3>' + s.titre + '</h3><p>' + s.texte + '</p><div class="stage__liens">' +
-        (s.page && !passe ? '<a class="bouton bouton--ligne" href="' + s.page + '">Voir le programme</a>' : '') +
         (s.plaquette ? '<a class="bouton bouton--ligne" href="' + s.plaquette + '" target="_blank" rel="noopener">Plaquette</a>' : '') +
         (passe ? '' : '<a class="bouton" href="contact.html?projet=stage#demande">Réserver mon stage</a>') +
         '</div></div>';
