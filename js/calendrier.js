@@ -81,7 +81,7 @@
         '</div>' +
         '<div class="cal__pied"><p class="cal__choix" aria-live="polite"></p>' +
           '<a class="bouton cal__continuer" href="contact.html#demande" aria-disabled="true">Continuer ma demande</a>' +
-          '<p class="cal__note">Maquette' + NB + ': disponibilités d’exemple.</p></div>' +
+          '<p class="cal__note">Réservations à jour au 23 octobre 2026.</p></div>' +
       '</aside>';
     document.body.appendChild(panneau);
 

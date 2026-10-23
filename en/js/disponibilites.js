@@ -1,6 +1,7 @@
 /* Domaine des Chabriers : disponibilités lues par le panneau « Calendrier » (calendrier.js).
-   MAQUETTE : les réservations ci-dessous sont des exemples. Sur le vrai site, elles viendront de l'agenda
-   du domaine (application de gestion), sans rien changer au panneau.
+   Réservations données par Céline le 23/10/2026 (week-ends du vendredi au dimanche, rien d'ici fin 2026) ;
+   elles bloquent tout le domaine. Le 11 mai 2027 est une option, comptée comme prise. Sur le vrai site,
+   elles viendront de l'agenda du domaine (application de gestion), sans rien changer au panneau.
 
    Trois choix (consigne de Tom du 23/10/2026) : tout le domaine en privatisation (mariage, réception,
    gros événement), le gîte A (le château) et le gîte C (la ferme). Les réservations se croisent : une
@@ -19,7 +20,15 @@ window.DISPONIBILITES = {
     mois: [4, 5, 6, 7, 8, 9, 10],
     minimum: 1,
     projet: 'mariage',
-    reserve: [['2027-05-22', '2027-05-24'], ['2027-06-26', '2027-06-28'], ['2027-09-11', '2027-09-13'], ['2027-09-25', '2027-09-27']]
+    reserve: [
+      ['2027-04-24', '2027-04-25'], ['2027-05-11', '2027-05-12'], ['2027-05-14', '2027-05-16'], ['2027-05-21', '2027-05-23'],
+      ['2027-05-28', '2027-05-30'], ['2027-06-04', '2027-06-06'], ['2027-06-11', '2027-06-13'], ['2027-06-18', '2027-06-20'],
+      ['2027-06-25', '2027-06-27'], ['2027-07-02', '2027-07-04'], ['2027-07-09', '2027-07-11'], ['2027-07-16', '2027-07-18'],
+      ['2027-07-23', '2027-07-25'], ['2027-07-30', '2027-08-01'], ['2027-08-06', '2027-08-08'], ['2027-08-13', '2027-08-15'],
+      ['2027-08-20', '2027-08-22'], ['2027-08-27', '2027-08-29'], ['2027-09-03', '2027-09-05'], ['2027-09-10', '2027-09-12'],
+      ['2027-09-17', '2027-09-19'], ['2028-06-02', '2028-06-05'], ['2028-06-09', '2028-06-11'], ['2028-07-07', '2028-07-09'],
+      ['2028-07-14', '2028-07-16'], ['2028-09-01', '2028-09-03']
+    ]
   },
   chateau: {
     nom: 'Gîte A · The château',
@@ -27,13 +36,7 @@ window.DISPONIBILITES = {
     mois: [4, 5, 6, 7, 8, 9, 10],
     minimum: 2,
     projet: 'gite',
-    reserve: [
-      ['2026-10-24', '2026-10-31'],
-      ['2027-05-07', '2027-05-09'], ['2027-05-14', '2027-05-17'], ['2027-05-28', '2027-05-30'],
-      ['2027-06-05', '2027-06-12'], ['2027-06-18', '2027-06-20'], ['2027-07-03', '2027-07-17'],
-      ['2027-07-24', '2027-07-31'], ['2027-08-07', '2027-08-21'], ['2027-08-28', '2027-09-04'],
-      ['2027-09-17', '2027-09-19'], ['2027-10-01', '2027-10-03'], ['2027-10-23', '2027-10-30']
-    ]
+    reserve: []
   },
   ferme: {
     nom: 'Gîte C · The farmhouse',
@@ -41,6 +44,6 @@ window.DISPONIBILITES = {
     ouvreLe: '2027-04-01',
     minimum: 2,
     projet: 'gite',
-    reserve: [['2027-04-16', '2027-04-18'], ['2027-05-14', '2027-05-17'], ['2027-07-10', '2027-07-24'], ['2027-08-14', '2027-08-21']]
+    reserve: []
   }
 };
